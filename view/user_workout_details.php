@@ -5,7 +5,7 @@ include 'include/header.php';
 <html>
 <head>
     <style type="text/css">
-        .notFnish {
+        .notFinish {
             background-color: #ff4d4d;
         }
     </style>
@@ -16,6 +16,18 @@ include 'include/header.php';
     <a href="index.php?action=home">Process</a>
     <a href="index.php?action=home">Setting</a>
 </div>
+<div>
+    <div id="count">
+        <span id="id_H">00</span>
+        <span id="id_M">00</span>
+        <span id="id_S">00</span>
+    </div>
+    <input id="start" type="button" value="start">
+    <input id="pause" type="button" value="pause">
+    <input id="stop" type="button" value="reset">
+</div>
+
+
 <div>
     <h2>Body part here</h2>
 
@@ -73,17 +85,21 @@ include 'include/header.php';
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript">
+
+
     //timmer
     window.onload = function () {
         function $(id) {
             return document.getElementById(id)
         }
+
         let count = 0
         let timer = null
         $("start").onclick = function () {
             timer = setInterval(function () {
                 count++;
                 console.log(count)
+
                 console.log($("id_S"))
                 $("id_S").innerHTML = showNum(count % 60)
                 $("id_M").innerHTML = showNum(parseInt(count / 60) % 60)
@@ -91,15 +107,22 @@ include 'include/header.php';
             }, 1000)
         }
         $("pause").onclick = function () {
+
             clearInterval(timer)
         }
+
         $("stop").onclick = function () {
+
             $("pause").onclick()
+            // clearInterval(timer)
+
             count = 0
+
             $("id_S").innerHTML = "00"
             $("id_M").innerHTML = "00"
             $("id_H").innerHTML = "00"
         }
+
 
         function showNum(num) {
             if (num < 10) {
@@ -110,30 +133,51 @@ include 'include/header.php';
     }
 
     //selected table
-    let numberOfExercise = 2;
-    for (let i = 1; i <= numberOfExercise; i++) {
+    for (let i = 1; i <= 2; i++) {
+        //whole exercise done
         $("#ex" + i).click(function () {
             $(this).css("backgroundColor", "#7BC96F")
             $(".ex" + i + "set").css("backgroundColor", "#7BC96F")
         });
 
+        //single part down
         $(".ex" + i + "set").each(function (j, n) {
             let len = $(".ex" + i + "set").length
             $(n).click(function () {
                 if (j < len - 1) {
                     $(n).css("backgroundColor", "#7BC96F")
-                } else if (j >= len - 1) {
+                }
+                //finish last set
+                else if (j >= len - 1) {
                     $("#ex" + i).css("backgroundColor", "#7BC96F")
                     $(".ex" + i + "set").css("backgroundColor", "#7BC96F")
                 }
             })
-            $("button").click(function () {
-                $(n).addClass("notFnish");
+            // $("button").click(function () {
+            //     if ($(this).attr("done") == undefined) {
+            //         $(this).attr("done", "true");
+            //         return;
+            //     }
+            //     else {
+            //         $("div").text($(this).val()+"done");
+            //     }
+            // })
+            //done
+            let finishWorkout = false;
+            $("button").click(function (finishWorkout) {
+                $(n).addClass("notFinish");
+
             })
-            $("button").click(function () {
-                window.location.href="index.php?action=home";
-            })
+
+            if(!finishWorkout){
+                console.log("111111")
+            }
+
+
         });
     }
+
+
+
 </script>
 </html>
