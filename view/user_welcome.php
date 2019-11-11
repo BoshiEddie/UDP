@@ -3,11 +3,9 @@ session_start();
 $title = 'Welcome';
 include 'include/header.php';
 
-include_once 'model/database.php';
-//also change sql statement here and select user name from .....
-$stmt = $db->prepare("SELECT firstname, lastname FROM clients WHERE phone_number=:phone_number");
-$stmt->execute(array(":phone_number" => $_SESSION['user_session']));
-$row = $stmt->fetch(PDO::FETCH_ASSOC);
+$c = new clientDataService();
+$phone_number = $_SESSION['user_session'];
+$results = $c->findByPhoneNumber($phone_number);
 ?>
 <html>
 <head>
@@ -25,7 +23,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 
         <!--change 'card_holder' to the column name here    -->
-        <h1>Welcome back <?php echo $row['firstname'], " ", $row['lastname']; ?> </h1>
+        <h1>Welcome back <?php echo $results[0]['firstname'], " ", $results[0]['lastname']; ?> </h1>
         <p>Here's your workout today</p>
 
 

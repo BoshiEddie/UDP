@@ -1,7 +1,8 @@
 <?php
 
 require('model/database.php');
-
+require_once 'model/clientDataService.php';
+require_once 'model/Client.php';
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {

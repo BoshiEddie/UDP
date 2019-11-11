@@ -163,15 +163,10 @@ include 'include/header.php';
             //     }
             // })
             //done
-            let finishWorkout = false;
             $("button").click(function (finishWorkout) {
                 $(n).addClass("notFinish");
 
             })
-
-            if(!finishWorkout){
-                console.log("111111")
-            }
 
 
         });
