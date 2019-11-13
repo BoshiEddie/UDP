@@ -12,12 +12,16 @@ if ($action == NULL) {
     }
 }
 
+global $clientNumber;
+
 if ($action == 'user_login') {
     include('view/userLogIn.php');
-} else if ($action == "user_inform") {
-    include('view/user_welcome.php');
+} else if ($action == "user_inform" ) {
+    $clientNumber = $_SESSION['user_session'];
+        include('view/user_welcome.php');
 }else if($action == "start_workout"){
     include ('view/user_workout_details.php');
 }else if($action == "home"){
     include('view/user_welcome.php');
 }
+else if($action == "setting"){}

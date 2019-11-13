@@ -1,11 +1,7 @@
 <?php
-session_start();
-$title = 'Welcome';
+$title = 'Settings';
 include 'include/header.php';
 
-$c = new clientDataService();
-$phone_number = $_SESSION['user_session'];
-$results = $c->findByPhoneNumber($phone_number);
 ?>
 <html>
 <head>
@@ -20,48 +16,16 @@ $results = $c->findByPhoneNumber($phone_number);
 
 <div id=" content">
     <div>
-
-
-        <!--change 'card_holder' to the column name here    -->
-        <h1>Welcome back <?php echo $results[0]['firstname'], " ", $results[0]['lastname']; ?> </h1>
-        <p>Here's your workout today</p>
-
-
         <div>
-            <h2>Body part here</h2>
-            <div>
-                <span id="day"></span><span id="time"></span>
-            </div>
+            <?php echo $results[0]['firstname'], " ", $results[0]['lastname']; ?>
         </div>
 
-        <!--exercise table here-->
-        <table border="1">
-            <tr>
-                <th>Exercise</th>
-                <th>Sets</th>
 
-            </tr>
-            <tr>
+        <button>
+            <a href="model/logout.php"><i aria-hidden="true"></i> &nbsp;Sign Out</a>
+        </button>
 
-                <!--
-            <?php //foreach ($currencies as $currency) : ?>
-                <tr>
-                    <td><?php //echo $currency['currency_name']; ?></td>
-                    <td><?php //echo $currency['quantity']; ?></td>
-                </tr>
-            <?php //endforeach; ?>
-            -->
-            </tr>
-
-
-        </table>
     </div>
-    <button>
-        <a href="index.php?action=start_workout">START WORKOUT</a>
-    </button>
-    <br>
-
-</div>
 </body>
 <?php include 'include/footer.php'; ?>
 
