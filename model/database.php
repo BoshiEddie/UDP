@@ -2,7 +2,7 @@
 class Database
 {
 
-    private $dbServerName = "localhost";
+    private $dbServerName = "localhost:8080";
     private $dbUserName = "root";
     private $dbPassword = "";
     private $dbName = "hercules";

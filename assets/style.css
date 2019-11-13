@@ -1,0 +1,26 @@
+#logoName{
+  margin-left: 5em;
+}
+
+#logo{
+  /* margin-top: -10em;
+  margin-left: -24em; */
+  margin-top: -12.6em;
+  margin-left: -2em;
+}
+
+/* Login Section */
+.phoneLogin{
+  text-align: center;
+}
+
+#username{
+  margin-top: 5em;
+}
+
+.passwordLogin{
+  text-align: center;
+}
+#password{
+  margin-top: 3em;
+}

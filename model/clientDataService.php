@@ -1,7 +1,7 @@
 <?php
 
-require_once 'Database.php';
-require_once  'Client.php';
+require_once 'database.php';
+// require_once  'client.php';
 
 class clientDataService
 {

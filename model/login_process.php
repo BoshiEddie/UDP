@@ -2,7 +2,7 @@
 
 session_start();
 require_once 'clientDataService.php';
-require_once 'Client.php';
+require_once 'client.php';
 $c = new clientDataService();
 
 if (isset($_POST['btn-login'])) {
@@ -27,4 +27,3 @@ if (isset($_POST['btn-login'])) {
         echo $e->getMessage();
     }
 }
-

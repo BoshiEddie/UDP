@@ -55,4 +55,11 @@ $('document').ready(function () {
         });
         return false;
     }
+
+    // Remember me check box
+    ons.bootstrap()
+      .controller('PageController', function() {
+        this.apples = true;
+        this.bananas = false;
+      });
 });
