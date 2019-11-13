@@ -1,3 +1,8 @@
+html *{
+font-family: 'Source Sans Pro', sans-serif;
+}
+
+
 #logoName{
   margin-left: 5em;
 }
@@ -23,4 +28,33 @@
 }
 #password{
   margin-top: 3em;
+}
+
+#remember{
+  margin-top: 5em;
+  margin-left: 5em;
+}
+
+#checkbox{
+  margin-left: -3em;
+  margin-right: 2px;
+}
+
+#fpassword{
+  margin-top: -1.45em;
+}
+
+#forget{
+  margin-left: 14.5em;
+  margin-top: 3em;
+}
+
+.buttton{
+  text-align: center;
+}
+
+#btn-login{
+  margin-top:6em;
+  color: white;
+  margin-left: 40%;
 }

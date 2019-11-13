@@ -42,29 +42,29 @@ if (isset($_SESSION['user_session']) != "") {
 
         </div>
 
-
-        <div>
-            <!-- <button type="submit" name="btn-login" id="btn-login">
-                <i aria-hidden="true"></i>
-                Sign In
-            </button> -->
-            <ons-button onclick="alert('Hello World!')">Sign In</ons-button>
-        </div>
-
-        <!-- Remember me -->
-        <ons-list-item tappable>
+        <!-- Remember Me -->
+        <div id="remember">
           <label class="left">
-            <ons-checkbox input-id="check-1" ng-model="page.apples"></ons-checkbox>
+            <ons-checkbox input-id="check-1" id="checkbox"></ons-checkbox>
           </label>
           <label for="check-1" class="center">
             Remember Me
           </label>
-        </ons-list-item>
+        </div>
 
+        <div id="fpassword">
+          <!-- On click direct to forgot password page -->
+          <label onclick="myFunction()" class="center" id="forget">
+            Forgot Password
+          </label>
+        </div>
 
+        <!-- Submit Button -->
+        <div id="btn-login">
+            <ons-button id="test" type="submit">Sign In</ons-button>
+        </div>
     </form>
 </div>
-
 
 <?php include 'include/footer.php'; ?>
 </body>
