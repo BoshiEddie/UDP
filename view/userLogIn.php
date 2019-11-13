@@ -57,7 +57,7 @@ if (isset($_SESSION['user_session']) != "") {
             <ons-checkbox input-id="check-1" ng-model="page.apples"></ons-checkbox>
           </label>
           <label for="check-1" class="center">
-            Remember Me 
+            Remember Me
           </label>
         </ons-list-item>
 
