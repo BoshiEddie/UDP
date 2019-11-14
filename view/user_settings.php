@@ -58,7 +58,9 @@ echo json_encode($client_information);
 
         let jsondata = <?php echo json_encode($client_information); ?>;
         let birthday = jsondata["D.O.B"];
-        let
+        let weight = jsondata["current_weight"];
+        let height = jsondata["height"];
+        let medical_issues = jsondata["medical_issues"];
         let date = new Date();
         let startDate = new Date(birthday);
         let newDate = date.getTime() - startDate.getTime();
@@ -67,6 +69,9 @@ echo json_encode($client_information);
             age = "";
         }
         $("#age").html(age);
+        $("#weight").html(weight);
+        $("#height").html(height);
+        $("#medical_issues").html(medical_issues);
     });
 </script>
 </html>

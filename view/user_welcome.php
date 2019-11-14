@@ -2,7 +2,6 @@
 session_start();
 $title = 'Welcome';
 include 'include/header.php';
-
 $c = new clientDataService();
 $phone_number = $_SESSION['user_session'];
 $results = $c->findByPhoneNumber($phone_number);
@@ -21,12 +20,8 @@ $_SESSION['user_inform'] = $results;
 
 <div id=" content">
     <div>
-
-
-        <!--change 'card_holder' to the column name here    -->
         <h1>Welcome back <?php echo $results[0]['firstname'], " ", $results[0]['lastname']; ?> </h1>
         <p>Here's your workout today</p>
-
 
         <div>
             <h2>Body part here</h2>
@@ -40,7 +35,6 @@ $_SESSION['user_inform'] = $results;
             <tr>
                 <th>Exercise</th>
                 <th>Sets</th>
-
             </tr>
             <tr>
 
@@ -65,7 +59,6 @@ $_SESSION['user_inform'] = $results;
 </div>
 </body>
 <?php include 'include/footer.php'; ?>
-
 <script type="text/javascript">
     window.onload = function () {
         setInterval("clock()", 1000);

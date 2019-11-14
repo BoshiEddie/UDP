@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 require_once 'clientDataService.php';
 require_once 'Client.php';
