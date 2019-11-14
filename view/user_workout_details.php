@@ -14,7 +14,7 @@ include 'include/header.php';
 <div class="nav bottom">
     <a href="index.php?action=home">Home</a>
     <a href="index.php?action=home">Process</a>
-    <a href="index.php?action=home">Setting</a>
+    <a href="index.php?action=setting">Setting</a>
 </div>
 <div>
     <div id="count">

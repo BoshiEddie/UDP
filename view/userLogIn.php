@@ -1,12 +1,10 @@
 <?php
 $title = 'User Login';
 include 'include/header.php';
-
 session_start();
 if (isset($_SESSION['user_session']) != "") {
     header("location:index.php?action=user_inform");
 }
-
 ?>
 
 <body>
@@ -33,6 +31,7 @@ if (isset($_SESSION['user_session']) != "") {
 
             <ons-input id="phone_number" name="phone_number" modifier="underbar" placeholder="Phone Number" float ng-model="page.username" pattern="[0-9]*$"></ons-input>
 
+>>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
             <span id="check-e"></span>
         </div>
 
@@ -40,6 +39,7 @@ if (isset($_SESSION['user_session']) != "") {
 
             <ons-input id="password" name="password" type="password" modifier="underbar" placeholder="Password" float ng-model="page.username" pattern="^([a-zA-Z0-9!%^&*_@#~]){8,16}$"></ons-input>
 
+>>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
         </div>
 
         <!-- Remember Me -->
