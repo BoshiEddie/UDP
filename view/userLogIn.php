@@ -1,12 +1,10 @@
 <?php
 $title = 'User Login';
 include 'include/header.php';
-
 session_start();
 if (isset($_SESSION['user_session']) != "") {
     header("location:index.php?action=user_inform");
 }
-
 ?>
 
 <body>
