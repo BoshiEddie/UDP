@@ -2,10 +2,10 @@
 session_start();
 $title = 'Welcome';
 include 'include/header.php';
-
 $c = new clientDataService();
 $phone_number = $_SESSION['user_session'];
 $results = $c->findByPhoneNumber($phone_number);
+$_SESSION['user_inform'] = $results;
 ?>
 <html>
 <head>
@@ -15,17 +15,13 @@ $results = $c->findByPhoneNumber($phone_number);
 <div class="nav bottom">
     <a href="index.php?action=home">Home</a>
     <a href="index.php?action=home">Process</a>
-    <a href="index.php?action=home">Setting</a>
+    <a href="index.php?action=setting">Setting</a>
 </div>
 
 <div id=" content">
     <div>
-
-
-        <!--change 'card_holder' to the column name here    -->
         <h1>Welcome back <?php echo $results[0]['firstname'], " ", $results[0]['lastname']; ?> </h1>
         <p>Here's your workout today</p>
-
 
         <div>
             <h2>Body part here</h2>
@@ -39,7 +35,6 @@ $results = $c->findByPhoneNumber($phone_number);
             <tr>
                 <th>Exercise</th>
                 <th>Sets</th>
-
             </tr>
             <tr>
 
@@ -60,14 +55,10 @@ $results = $c->findByPhoneNumber($phone_number);
         <a href="index.php?action=start_workout">START WORKOUT</a>
     </button>
     <br>
-    <button>
-        <a href="model/logout.php"><i aria-hidden="true"></i> &nbsp;Sign Out</a>
-    </button>
 
 </div>
 </body>
 <?php include 'include/footer.php'; ?>
-
 <script type="text/javascript">
     window.onload = function () {
         setInterval("clock()", 1000);
