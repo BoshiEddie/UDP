@@ -3,7 +3,6 @@ $title = 'Settings';
 include 'include/header.php';
 session_start();
 $client_information = $_SESSION['user_inform'][0];
-echo json_encode($client_information);
 ?>
 <html>
 <head>

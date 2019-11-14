@@ -10,7 +10,7 @@ include 'include/header.php';
         }
     </style>
 </head>
-<body>
+<body onload="timer()">
 <div class="nav bottom">
     <a href="index.php?action=home">Home</a>
     <a href="index.php?action=home">Process</a>
@@ -22,9 +22,8 @@ include 'include/header.php';
         <span id="id_M">00</span>
         <span id="id_S">00</span>
     </div>
-    <input id="start" type="button" value="start">
     <input id="pause" type="button" value="pause">
-    <input id="stop" type="button" value="reset">
+    <input id="start" type="button" value="start">
 </div>
 
 
@@ -80,49 +79,46 @@ include 'include/header.php';
 </div>
 
 <div>
-    <button>FINISH WORKOUT</button>
+    <button id="finish_workout">FINISH WORKOUT</button>
 </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript">
-
-
     //timmer
-    window.onload = function () {
+    let totalCount = 0;
+
+    function timer() {
+        console.log("timer working");
+
         function $(id) {
             return document.getElementById(id)
         }
 
-        let count = 0
-        let timer = null
+        let count = 0;
+        let timer = null;
+        timer = setInterval(function () {
+            count++;
+            console.log(count);
+            console.log($("id_S"));
+            $("id_S").innerHTML = showNum(count % 60);
+            $("id_M").innerHTML = showNum(parseInt(count / 60) % 60);
+            $("id_H").innerHTML = showNum(parseInt(count / 60 / 60));
+        }, 1000)
+
+
         $("start").onclick = function () {
             timer = setInterval(function () {
                 count++;
-                console.log(count)
-
-                console.log($("id_S"))
-                $("id_S").innerHTML = showNum(count % 60)
-                $("id_M").innerHTML = showNum(parseInt(count / 60) % 60)
-                $("id_H").innerHTML = showNum(parseInt(count / 60 / 60))
+                console.log(count);
+                console.log($("id_S"));
+                $("id_S").innerHTML = showNum(count % 60);
+                $("id_M").innerHTML = showNum(parseInt(count / 60) % 60);
+                $("id_H").innerHTML = showNum(parseInt(count / 60 / 60));
             }, 1000)
         }
         $("pause").onclick = function () {
-
             clearInterval(timer)
         }
-
-        $("stop").onclick = function () {
-
-            $("pause").onclick()
-            // clearInterval(timer)
-
-            count = 0
-
-            $("id_S").innerHTML = "00"
-            $("id_M").innerHTML = "00"
-            $("id_H").innerHTML = "00"
-        }
-
 
         function showNum(num) {
             if (num < 10) {
@@ -130,6 +126,20 @@ include 'include/header.php';
             }
             return num
         }
+
+        $("finish_workout").onclick = function () {
+            $("pause").onclick();
+            totalCount = count;
+            count = 0;
+            $("id_S").innerHTML = "00";
+            $("id_M").innerHTML = "00";
+            $("id_H").innerHTML = "00";
+            saveTime(totalCount);
+        }
+    }
+
+    function saveTime(t) {
+        alert(t);
     }
 
     //selected table
@@ -153,26 +163,11 @@ include 'include/header.php';
                     $(".ex" + i + "set").css("backgroundColor", "#7BC96F")
                 }
             })
-            // $("button").click(function () {
-            //     if ($(this).attr("done") == undefined) {
-            //         $(this).attr("done", "true");
-            //         return;
-            //     }
-            //     else {
-            //         $("div").text($(this).val()+"done");
-            //     }
-            // })
-            //done
-            $("button").click(function (finishWorkout) {
+            $("#finish_workout").click(function () {
                 $(n).addClass("notFinish");
-
             })
-
-
         });
     }
-
-
 
 </script>
 </html>

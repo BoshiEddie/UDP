@@ -14,13 +14,12 @@ if ($action == NULL) {
 
 if ($action == 'user_login') {
     include('view/userLogIn.php');
-} else if ($action == "user_inform" ) {
-        include('view/user_welcome.php');
-}else if($action == "start_workout"){
-    include ('view/user_workout_details.php');
-}else if($action == "home"){
+} else if ($action == "user_inform") {
     include('view/user_welcome.php');
-}
-else if($action == "setting"){
-    include ('view/user_settings.php');
+} else if ($action == "start_workout") {
+    include('view/user_workout_details.php');
+} else if ($action == "home") {
+    include('view/user_welcome.php');
+} else if ($action == "setting") {
+    include('view/user_settings.php');
 }
