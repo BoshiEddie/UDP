@@ -31,15 +31,12 @@ if (isset($_SESSION['user_session']) != "") {
         <!-- Login Start -->
 
         <div class="phoneLogin">
-            <!-- <input placeholder="Phone Number" name="phone_number" id="phone_number" pattern="[0-9]*$"/> -->
-            <ons-input id="username" modifier="underbar" placeholder="Phone Number" float ng-model="page.username"></ons-input>
-
+            <ons-input id="username" modifier="underbar" placeholder="Phone Number" float ng-model="page.username" pattern="[0-9]*$"></ons-input>
             <span id="check-e"></span>
         </div>
 
         <div class="passwordLogin">
             <ons-input id="password" modifier="underbar" placeholder="Password" float ng-model="page.username" pattern="^([a-zA-Z0-9!%^&*_@#~]){8,16}$" required autofocus></ons-input>
-
         </div>
 
         <!-- Remember Me -->
