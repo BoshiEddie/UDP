@@ -10,35 +10,58 @@ if (isset($_SESSION['user_session']) != "") {
 <body>
 <div>
     <form method="post" id="login-form">
+
+        <!-- Hercules Logo -->
+        <div id="logoName">
+          <img src="./images/name.png" alt="Logo" height="230" width="291.33">
+        </div>
+
+        <div id="logo">
+          <img src="./images/name2.png" alt="Logo" height="187" width="187">
+        </div>
+        <!-- End of Logo -->
+
+        <!-- Error -->
         <div id="error">
             <!-- error will be shown here ! -->
         </div>
 
-        <h5>Phone Number:</h5>
-
-        <div>
-            <input placeholder="Phone Number" name="phone_number" id="phone_number" pattern="[0-9]*$"/>
+        <!-- Login Start -->
+        <div class="phoneLogin">
+<<<<<<< HEAD
+            <ons-input id="username" modifier="underbar" placeholder="Phone Number" float ng-model="page.username" pattern="[0-9]*$"></ons-input>
+=======
+            <ons-input id="phone_number" name="phone_number" modifier="underbar" placeholder="Phone Number" float ng-model="page.username" pattern="[0-9]*$"></ons-input>
+>>>>>>> renzo
             <span id="check-e"></span>
         </div>
 
-        <h5>Password:</h5>
-        <div>
-            <input type="password" placeholder="password" name="password" id="password"
-                   pattern="^([a-zA-Z0-9!%^&*_@#~]){8,16}$" required autofocus/>
-        </div>
-        <br/>
-        <div>
-            <button type="submit" name="btn-login" id="btn-login">
-                <i aria-hidden="true"></i>
-                Sign In
-            </button>
+        <div class="passwordLogin">
+<<<<<<< HEAD
+            <ons-input id="password" modifier="underbar" placeholder="Password" float ng-model="page.username" pattern="^([a-zA-Z0-9!%^&*_@#~]){8,16}$" required autofocus></ons-input>
+=======
+            <ons-input id="password" name="password" type="password" modifier="underbar" placeholder="Password" float ng-model="page.username" pattern="^([a-zA-Z0-9!%^&*_@#~]){8,16}$"></ons-input>
+>>>>>>> renzo
         </div>
 
+        <!-- Remember Me -->
+
+
+        <!-- Submit Button -->
+        <div>
+                <button type="submit" name="btn-login" class="btn btn-dark"id="btn-login">
+                    <i aria-hidden="true"></i>
+                    Sign In
+                </button>
+            </div>
+
+
+        <!-- <button type="submit" name="btn-login" id="btn-login" onclick=sub()>
+            <i aria-hidden="true"></i>
+            Sign In
+        </button> -->
     </form>
 </div>
 
-
 <?php include 'include/footer.php'; ?>
 </body>
-
-
