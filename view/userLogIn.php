@@ -15,7 +15,7 @@ if (isset($_SESSION['user_session']) != "") {
 
         <!-- Hercules Logo -->
         <div id="logoName">
-          <img src="./images/name.png" alt="Logo" height="238" width="291.33">
+          <img src="./images/name.png" alt="Logo" height="230" width="291.33">
         </div>
 
         <div id="logo">
@@ -29,37 +29,39 @@ if (isset($_SESSION['user_session']) != "") {
         </div>
 
         <!-- Login Start -->
-
         <div class="phoneLogin">
+<<<<<<< HEAD
             <ons-input id="username" modifier="underbar" placeholder="Phone Number" float ng-model="page.username" pattern="[0-9]*$"></ons-input>
+=======
+            <ons-input id="phone_number" name="phone_number" modifier="underbar" placeholder="Phone Number" float ng-model="page.username" pattern="[0-9]*$"></ons-input>
+>>>>>>> renzo
             <span id="check-e"></span>
         </div>
 
         <div class="passwordLogin">
+<<<<<<< HEAD
             <ons-input id="password" modifier="underbar" placeholder="Password" float ng-model="page.username" pattern="^([a-zA-Z0-9!%^&*_@#~]){8,16}$" required autofocus></ons-input>
+=======
+            <ons-input id="password" name="password" type="password" modifier="underbar" placeholder="Password" float ng-model="page.username" pattern="^([a-zA-Z0-9!%^&*_@#~]){8,16}$"></ons-input>
+>>>>>>> renzo
         </div>
 
         <!-- Remember Me -->
-        <div id="remember">
-          <label class="left">
-            <ons-checkbox input-id="check-1" id="checkbox"></ons-checkbox>
-          </label>
-          <label for="check-1" class="center">
-            Remember Me
-          </label>
-        </div>
 
-        <div id="fpassword">
-          <!-- On click direct to forgot password page -->
-          <label onclick="myFunction()" class="center" id="forget">
-            Forgot Password
-          </label>
-        </div>
 
         <!-- Submit Button -->
-        <div id="btn-login">
-            <ons-button id="test" type="submit">Sign In</ons-button>
-        </div>
+        <div>
+                <button type="submit" name="btn-login" class="btn btn-dark"id="btn-login">
+                    <i aria-hidden="true"></i>
+                    Sign In
+                </button>
+            </div>
+
+
+        <!-- <button type="submit" name="btn-login" id="btn-login" onclick=sub()>
+            <i aria-hidden="true"></i>
+            Sign In
+        </button> -->
     </form>
 </div>
 

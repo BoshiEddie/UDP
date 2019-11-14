@@ -2,7 +2,7 @@
 
 session_start();
 require_once 'clientDataService.php';
-require_once 'client.php';
+require_once 'Client.php';
 $c = new clientDataService();
 
 if (isset($_POST['btn-login'])) {
