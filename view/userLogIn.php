@@ -30,7 +30,7 @@ if (isset($_SESSION['user_session']) != "") {
         </div>
         <br/>
         <div>
-            <button type="submit" name="btn-login" id="btn-login">
+            <button type="submit" name="btn-login" id="btn-login" onclick=sub()>
                 <i aria-hidden="true"></i>
                 Sign In
             </button>
@@ -42,5 +42,12 @@ if (isset($_SESSION['user_session']) != "") {
 
 <?php include 'include/footer.php'; ?>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+   function sub() {
+       alert($("#password").innerText);
+   }
+
+</script>
 
 
