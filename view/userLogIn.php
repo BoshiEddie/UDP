@@ -28,12 +28,26 @@ if (isset($_SESSION['user_session']) != "") {
 
         <!-- Login Start -->
         <div class="phoneLogin">
+<<<<<<< HEAD
             <ons-input id="phone_number" name="phone_number" modifier="underbar" placeholder="Phone Number" float ng-model="page.username" pattern="[0-9]*$"></ons-input>
+=======
+
+            <ons-input id="phone_number" name="phone_number" modifier="underbar" placeholder="Phone Number" float ng-model="page.username" pattern="[0-9]*$"></ons-input>
+
+>>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
+>>>>>>> 34a7bcdaa0495467515d495cb8267568c510cc38
             <span id="check-e"></span>
         </div>
 
         <div class="passwordLogin">
+<<<<<<< HEAD
             <ons-input id="password" name="password" type="password" modifier="underbar" placeholder="Password" float ng-model="page.username" pattern="^([a-zA-Z0-9!%^&*_@#~]){8,16}$"></ons-input>
+=======
+
+            <ons-input id="password" name="password" type="password" modifier="underbar" placeholder="Password" float ng-model="page.username" pattern="^([a-zA-Z0-9!%^&*_@#~]){8,16}$"></ons-input>
+
+>>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
+>>>>>>> 34a7bcdaa0495467515d495cb8267568c510cc38
         </div>
 
         <!-- Remember Me -->
