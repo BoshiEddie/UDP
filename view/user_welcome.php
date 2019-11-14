@@ -6,6 +6,7 @@ include 'include/header.php';
 $c = new clientDataService();
 $phone_number = $_SESSION['user_session'];
 $results = $c->findByPhoneNumber($phone_number);
+$_SESSION['user_inform'] = $results;
 ?>
 <html>
 <head>
