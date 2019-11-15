@@ -2,7 +2,7 @@
 $title = 'Workout';
 include 'include/header.php';
 ?>
-<html>
+
 <head>
     <style type="text/css">
         .notFinish {
@@ -99,33 +99,33 @@ include 'include/header.php';
         timer = setInterval(function () {
             count++;
             console.log(count);
-            console.log($("id_S"));
+            console.log("id_S");
             $("id_S").innerHTML = showNum(count % 60);
             $("id_M").innerHTML = showNum(parseInt(count / 60) % 60);
             $("id_H").innerHTML = showNum(parseInt(count / 60 / 60));
-        }, 1000)
+        }, 1000);
 
 
         $("start").onclick = function () {
             timer = setInterval(function () {
                 count++;
                 console.log(count);
-                console.log($("id_S"));
+                console.log("id_S");
                 $("id_S").innerHTML = showNum(count % 60);
                 $("id_M").innerHTML = showNum(parseInt(count / 60) % 60);
                 $("id_H").innerHTML = showNum(parseInt(count / 60 / 60));
             }, 1000)
-        }
+        };
         $("pause").onclick = function () {
             clearInterval(timer)
-        }
+        };
 
         function showNum(num) {
             if (num < 10) {
                 return '0' + num
             }
             return num
-        }
+        };
 
         $("finish_workout").onclick = function () {
             $("pause").onclick();
@@ -135,12 +135,12 @@ include 'include/header.php';
             $("id_M").innerHTML = "00";
             $("id_H").innerHTML = "00";
             saveTime(totalCount);
-        }
+        };
     }
 
     function saveTime(t) {
         alert(t);
-    }
+    };
 
     //selected table
     for (let i = 1; i <= 2; i++) {
@@ -167,7 +167,7 @@ include 'include/header.php';
                 $(n).addClass("notFinish");
             })
         });
-    }
+    };
 
 </script>
 </html>
