@@ -27,14 +27,44 @@ if (isset($_SESSION['user_session']) != "") {
         <div>
             <input type="password" placeholder="password" name="password" id="password"
                    pattern="^([a-zA-Z0-9!%^&*_@#~]){8,16}$" required autofocus/>
+
+        <!-- Login Start -->
+        <div class="phoneLogin">
+
+            <ons-input id="phone_number" name="phone_number" modifier="underbar" placeholder="Phone Number" float ng-model="page.username" pattern="[0-9]*$"></ons-input>
+
+
+            <ons-input id="phone_number" name="phone_number" modifier="underbar" placeholder="Phone Number" float ng-model="page.username" pattern="[0-9]*$"></ons-input>
+
+
+            <span id="check-e"></span>
+        </div>
+
+        <div class="passwordLogin">
+
+            <ons-input id="password" name="password" type="password" modifier="underbar" placeholder="Password" float ng-model="page.username" pattern="^([a-zA-Z0-9!%^&*_@#~]){8,16}$"></ons-input>
+
+
+            <ons-input id="password" name="password" type="password" modifier="underbar" placeholder="Password" float ng-model="page.username" pattern="^([a-zA-Z0-9!%^&*_@#~]){8,16}$"></ons-input>
+
+
         </div>
         <br/>
         <div>
+
             <button type="submit" name="btn-login" id="btn-login">
                 <i aria-hidden="true"></i>
                 Sign In
             </button>
         </div>
+
+          <button type="submit" name="btn-login" class="btn btn-dark"id="btn-login">
+          <i aria-hidden="true"></i>
+            Sign In
+          </button>
+        </div>
+
+
 
     </form>
 </div>
