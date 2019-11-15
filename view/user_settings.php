@@ -3,24 +3,72 @@ $title = 'Settings';
 include 'include/header.php';
 session_start();
 $client_information = $_SESSION['user_inform'][0];
-echo json_encode($client_information);
 ?>
-<html>
-<head>
+<style type="text/css">
+    .nav-img{
+        background-color: #E7EBFD;
+        width: 100%;
+        height: 20%;
+    }
+    .nav-img img{
+        width: 80%;
 
-</head>
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .navbar_bottom {
+        overflow: hidden;
+        background-color: #E7EBFD;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .navbar_bottom a {
+        float: left;
+        display: block;
+        color: #4d4f5c;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        width: 33.33333333333%;
+    }
+
+    .navbar_bottom a:hover {
+        background: #f1f1f1;
+        color: black;
+    }
+
+    .navbar_bottom a.active {
+        background-color: #707070;
+        color: white;
+    }
+
+</style>
 <body>
-<div class="nav bottom">
-    <a href="index.php?action=home">Home</a>
-    <a href="index.php?action=home">Process</a>
-    <a href="index.php?action=setting">Setting</a>
+<div class="nav-img">
+    <img src="images/logo_name_fix.png">
 </div>
 
-<div id=" content">
+<nav class="navbar_bottom">
+    <a href="index.php?action=home">Home</a>
+    <a href="index.php?action=home">Process</a>
+    <a href="index.php?action=setting" class="active">Setting</a>
+</nav>
+
+
+
+<div>
+    <div class="">
+
+    </div>
     <div>
         <h2><?php echo $client_information['firstname'], " ", $client_information['lastname']; ?></h2>
 
-        <table border="1">
+        <table border="1" >
             <thead>
             <tr>My Info </tr>
             </thead>
@@ -55,7 +103,6 @@ echo json_encode($client_information);
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript">
     $(function () {
-
         let jsondata = <?php echo json_encode($client_information); ?>;
         let birthday = jsondata["D.O.B"];
         let weight = jsondata["current_weight"];
@@ -73,5 +120,6 @@ echo json_encode($client_information);
         $("#height").html(height);
         $("#medical_issues").html(medical_issues);
     });
+
 </script>
 </html>
