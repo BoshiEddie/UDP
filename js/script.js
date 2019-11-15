@@ -122,6 +122,3 @@ function current_time() {
 
     spt.innerHTML = week + " " + month + " " + d.getDate() + "th " + d.getFullYear() + " ";
 }
-
-
-

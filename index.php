@@ -23,6 +23,3 @@ if ($action == 'user_login') {
 }else if($action == "home"){
     include('view/user_welcome.php');
 }
-else if($action == "setting"){
-    include ('view/user_settings.php');
-}
