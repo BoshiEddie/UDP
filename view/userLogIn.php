@@ -32,6 +32,7 @@ if (isset($_SESSION['user_session']) != "") {
         </div>
 
 
+
         <h5>Password:</h5>
         <div>
             <input type="password" placeholder="password" name="password" id="password"
@@ -65,11 +66,26 @@ if (isset($_SESSION['user_session']) != "") {
                     <input id="password" name="password" type="password" modifier="underbar" placeholder="Password"
                            float ng-model="page.username" pattern="^([a-zA-Z0-9!%^&*_@#~]){8,16}$"></input>
 
+        <div class="passwordLogin">
+            <input id="password" name="password" type="password" modifier="underbar" placeholder="Password" float ng-model="page.username" pattern="^([a-zA-Z0-9!%^&*_@#~]){8,16}$"></input>
+
+        </div>
+        <br/>
+
                 </div>
                 <br/>
 
 
                 <div>
+
+        <div>
+            <button type="submit" name="btn-login" class="btn btn-secondary btn-lg" id="btn-login">
+
+                <i aria-hidden="true"></i>
+                Sign In
+            </button>
+        </div>
+
 
 
                     <button type="submit" name="btn-login" id="btn-login">
