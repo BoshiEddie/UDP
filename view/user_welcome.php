@@ -1,7 +1,7 @@
 <?php
 session_start();
 $title = 'Welcome';
-include 'include/header.php';
+include 'asset/include/header.php';
 
 $c = new clientDataService();
 $phone_number = $_SESSION['user_session'];
@@ -61,6 +61,6 @@ $_SESSION['user_inform'] = $results;
 
 </div>
 </body>
-<?php include 'include/footer.php'; ?>
+<?php include 'asset/include/footer.php'; ?>
 
 </html>

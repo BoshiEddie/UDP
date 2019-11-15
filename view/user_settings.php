@@ -1,6 +1,6 @@
 <?php
 $title = 'Settings';
-include 'include/header.php';
+include 'asset/include/header.php';
 session_start();
 $client_information = $_SESSION['user_inform'][0];
 ?>
@@ -12,7 +12,6 @@ $client_information = $_SESSION['user_inform'][0];
     }
     .nav-img img{
         width: 80%;
-
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -50,7 +49,7 @@ $client_information = $_SESSION['user_inform'][0];
 </style>
 <body>
 <div class="nav-img">
-    <img src="images/logo_name_fix.png">
+    <img src="asset/images/logo_name_fix.png">
 </div>
 
 <nav class="navbar_bottom">
@@ -99,7 +98,7 @@ $client_information = $_SESSION['user_inform'][0];
 
     </div>
 </body>
-<?php include 'include/footer.php'; ?>
+<?php include 'asset/include/footer.php'; ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript">
     $(function () {

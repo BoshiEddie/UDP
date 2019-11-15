@@ -1,6 +1,6 @@
 <?php
 $title = 'User Login';
-include 'include/header.php';
+include 'asset/include/header.php';
 session_start();
 if (isset($_SESSION['user_session']) != "") {
     header("location:index.php?action=user_inform");
@@ -58,5 +58,5 @@ if (isset($_SESSION['user_session']) != "") {
 </div>
 
 
-<?php include 'include/footer.php'; ?>
+<?php include 'asset/include/footer.php'; ?>
 </body>

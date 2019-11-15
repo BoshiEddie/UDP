@@ -1,6 +1,6 @@
 <?php
 $title = 'Workout';
-include 'include/header.php';
+include 'asset/include/header.php';
 ?>
 
 <head>
