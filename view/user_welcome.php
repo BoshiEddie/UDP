@@ -1,7 +1,7 @@
 <?php
 session_start();
 $title = 'Welcome';
-include 'include/header.php';
+include 'asset/include/header.php';
 
 $c = new clientDataService();
 $phone_number = $_SESSION['user_session'];
@@ -10,21 +10,21 @@ $_SESSION['user_inform'] = $results;
 ?>
 
 <body onload="current_time()">
-<nav class="nav navbar-dark">
-    <a href="index.php?action=home">Home</a>
-    <a href="index.php?action=home">Process</a>
-    <a href="index.php?action=setting">Setting</a>
-</nav>
+<header class="fixed-top">
+    <div class="nav-img ">
+        <img src="asset/images/logo_name_fix.png">
+    </div>
+    <nav class="navbar_bottom fixed-bottom">
+        <a href="index.php?action=home" class="active">Home</a>
+        <a href=" index.php?action=home">Process</a>
+        <a href="index.php?action=setting" ">Setting</a>
+    </nav>
+</header>
 
-<div id=" content">
+<div class="container cont_overflow">
     <div>
-
-
-        <!--change 'card_holder' to the column name here    -->
         <h1>Welcome back <?php echo $results[0]['firstname'], " ", $results[0]['lastname']; ?> </h1>
         <p>Here's your workout today</p>
-
-
         <div>
             <h2>Body part here</h2>
             <div>
@@ -54,13 +54,17 @@ $_SESSION['user_inform'] = $results;
 
         </table>
     </div>
-    <button>
-        <a href="index.php?action=start_workout">START WORKOUT</a>
-    </button>
     <br>
+    <div>
+        <button class="butttons_dark">
+            <a href="index.php?action=start_workout" >START WORKOUT</a>
+        </button>
+        <br>
+    </div>
+
 
 </div>
 </body>
-<?php include 'include/footer.php'; ?>
+<?php include 'asset/include/footer.php'; ?>
 
 </html>
