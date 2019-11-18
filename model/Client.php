@@ -1,12 +1,8 @@
 <?php
-<<<<<<< HEAD
-class Client{
-=======
 
 
 class Client{
 
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
     private $client_id;
     private $firstname;
     private $lastname;
@@ -17,15 +13,10 @@ class Client{
     private $current_weight;
     private $height;
     private $password;
-<<<<<<< HEAD
-    public function __construct($cid, $fn, $ln, $adrs, $pn, $do, $mi, $cw, $h, $pwd)
-    {
-=======
 
     public function __construct($cid, $fn, $ln, $adrs, $pn, $do, $mi, $cw, $h, $pwd)
     {
 
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
         $this->client_id = $cid;
         $this->firstname = $fn;
         $this->lastname = $ln;
@@ -37,10 +28,7 @@ class Client{
         $this->height = $h;
         $this->password = $pwd;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
     /**
      * @return mixed
      */
@@ -48,10 +36,7 @@ class Client{
     {
         return $this->client_id;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
     /**
      * @param mixed $client_id
      */
@@ -59,10 +44,7 @@ class Client{
     {
         $this->client_id = $client_id;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
     /**
      * @return mixed
      */
@@ -70,10 +52,7 @@ class Client{
     {
         return $this->firstname;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
     /**
      * @param mixed $firstname
      */
@@ -81,10 +60,7 @@ class Client{
     {
         $this->firstname = $firstname;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
     /**
      * @return mixed
      */
@@ -92,10 +68,7 @@ class Client{
     {
         return $this->lastname;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
     /**
      * @param mixed $lastname
      */
@@ -103,10 +76,7 @@ class Client{
     {
         $this->lastname = $lastname;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
     /**
      * @return mixed
      */
@@ -114,10 +84,7 @@ class Client{
     {
         return $this->address;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
     /**
      * @param mixed $address
      */
@@ -125,10 +92,7 @@ class Client{
     {
         $this->address = $address;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
     /**
      * @return mixed
      */
@@ -136,10 +100,7 @@ class Client{
     {
         return $this->phone_number;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
     /**
      * @param mixed $phone_number
      */
@@ -147,10 +108,7 @@ class Client{
     {
         $this->phone_number = $phone_number;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
     /**
      * @return mixed
      */
@@ -158,10 +116,7 @@ class Client{
     {
         return $this->dob;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
     /**
      * @param mixed $dob
      */
@@ -169,10 +124,7 @@ class Client{
     {
         $this->dob = $dob;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
     /**
      * @return mixed
      */
@@ -180,10 +132,7 @@ class Client{
     {
         return $this->medical_issues;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
     /**
      * @param mixed $medical_issues
      */
@@ -191,10 +140,7 @@ class Client{
     {
         $this->medical_issues = $medical_issues;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
     /**
      * @return mixed
      */
@@ -202,10 +148,7 @@ class Client{
     {
         return $this->current_weight;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
     /**
      * @param mixed $current_weight
      */
@@ -213,10 +156,7 @@ class Client{
     {
         $this->current_weight = $current_weight;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
     /**
      * @return mixed
      */
@@ -224,10 +164,7 @@ class Client{
     {
         return $this->height;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
     /**
      * @param mixed $height
      */
@@ -235,10 +172,7 @@ class Client{
     {
         $this->height = $height;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
     /**
      * @return mixed
      */
@@ -246,10 +180,7 @@ class Client{
     {
         return $this->password;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae
     /**
      * @param mixed $password
      */
@@ -257,11 +188,7 @@ class Client{
     {
         $this->password = $password;
     }
-<<<<<<< HEAD
-}
-=======
 
 
 
 }
->>>>>>> a5eb835ed2bd51f6d48af7920ec60c73007f01ae

@@ -43,7 +43,10 @@ $('document').ready(function () {
             success: function (response) {
                 if (response == "ok") {
 
-                    $("#btn-login").html('<img src="./images/btn-ajax-loader.gif"/>Signing In ...');
+                    $("#btn-login").html(
+                        '<div class="spinner-border text-success ;" role="status">\n' +
+                        ' <span class="sr-only">Loading....</span>\n' +
+                        '</div> Signing    In ...');
                     setTimeout(' window.location.href = "index.php?action=user_inform"; ', 2000);
                 } else {
 

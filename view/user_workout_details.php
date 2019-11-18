@@ -1,6 +1,6 @@
 <?php
 $title = 'Workout';
-include 'include/header.php';
+include 'asset/include/header.php';
 ?>
 
 <head>
@@ -11,75 +11,83 @@ include 'include/header.php';
     </style>
 </head>
 <body onload="timer()">
-<div class="nav bottom">
-    <a href="index.php?action=home">Home</a>
-    <a href="index.php?action=home">Process</a>
-    <a href="index.php?action=setting">Setting</a>
-</div>
-<div>
-    <div id="count">
-        <span id="id_H">00</span>
-        <span id="id_M">00</span>
-        <span id="id_S">00</span>
+
+<header class="fixed-top">
+    <div class="nav-img ">
+        <img src="asset/images/logo_name_fix.png">
     </div>
-    <input id="pause" type="button" value="pause">
-    <input id="start" type="button" value="start">
-</div>
+    <nav class="navbar_bottom fixed-bottom">
+        <a href="index.php?action=home" class="active">Home</a>
+        <a href=" index.php?action=home">Process</a>
+        <a href="index.php?action=setting" ">Setting</a>
+    </nav>
+</header>
+<div class="container cont_overflow">
+    <div>
+        <div id="count">
+            <span id="id_H">00</span>
+            <span id="id_M">00</span>
+            <span id="id_S">00</span>
+        </div>
+        <input id="pause" type="button" value="pause">
+        <input id="start" type="button" value="start">
+    </div>
 
 
-<div>
-    <h2>Body part here</h2>
+    <div>
+        <h2>Body part here</h2>
 
-    <!--exercise table here-->
-    <table border="1">
-        <thead>
-        <tr>
-            <th>Exercise</th>
-            <th>Sets</th>
-            <th>Reps</th>
-            <th>Kg</th>
-        </tr>
-        </thead>
+        <!--exercise table here-->
+        <table border="1">
+            <thead>
+            <tr>
+                <th>Exercise</th>
+                <th>Sets</th>
+                <th>Reps</th>
+                <th>Kg</th>
+            </tr>
+            </thead>
 
-        <tbody>
-        <tr>
-            <td rowspan="3" id="ex1">Exercise1</td>
-            <td class="ex1set">1</td>
-            <td>12</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <td class="ex1set">2</td>
-            <td>12</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <td class="ex1set">3</td>
-            <td>12</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <td rowspan="3" id="ex2">Exercise2</td>
-            <td class="ex2set">1</td>
-            <td>10</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td class="ex2set">2</td>
-            <td>10</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td class="ex2set">3</td>
-            <td>10</td>
-            <td>10</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-
-<div>
-    <button id="finish_workout">FINISH WORKOUT</button>
+            <tbody>
+            <tr>
+                <td rowspan="3" id="ex1">Exercise1</td>
+                <td class="ex1set">1</td>
+                <td>12</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td class="ex1set">2</td>
+                <td>12</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td class="ex1set">3</td>
+                <td>12</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td rowspan="3" id="ex2">Exercise2</td>
+                <td class="ex2set">1</td>
+                <td>10</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td class="ex2set">2</td>
+                <td>10</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td class="ex2set">3</td>
+                <td>10</td>
+                <td>10</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div>
+        <button id="finish_workout" class="butttons_dark">FINISH WORKOUT</button>
+    </div>
 </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -167,7 +175,8 @@ include 'include/header.php';
                 $(n).addClass("notFinish");
             })
         });
-    };
+    }
+    ;
 
 </script>
 </html>
