@@ -56,9 +56,10 @@ $_SESSION['user_inform'] = $results;
     </div>
     <br>
     <div>
-        <button class="butttons_dark">
+        <button class="btn btn-secondary btn-lg">
             <a href="index.php?action=start_workout" >START WORKOUT</a>
         </button>
+        <button type="button" class="btn btn-secondary btn-lg">Large button</button>
         <br>
     </div>
 

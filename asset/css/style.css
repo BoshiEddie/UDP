@@ -56,9 +56,9 @@ html *{
     }
 
     #btn-login{
-        margin-top:2.4em;
+        margin-top:4em;
         color: white;
-        margin-left: 4em;
+        margin-left: 6em;
         width:8em;
     }
 
@@ -135,7 +135,7 @@ and (min-width:321px){
     #btn-login{
         margin-top:4em;
         color: white;
-        margin-left: 5.4em;
+        margin-left: 7.6em;
         width:8em;
     }
 
@@ -226,7 +226,7 @@ and (min-width:376px){
     #btn-login{
         margin-top:4em;
         color: white;
-        margin-left: 6.5em;
+        margin-left: 9.2em;
         width:8em;
     }
 
