@@ -9,6 +9,7 @@ if (isset($_SESSION['user_session']) != "") {
 
 
 <body>
+  <div id="particles-js"></div>
 <div>
     <form method="post" id="login-form">
         <!-- Hercules Logo -->
@@ -49,3 +50,6 @@ if (isset($_SESSION['user_session']) != "") {
 
 <?php include 'asset/include/footer.php'; ?>
 </body>
+
+<script src="asset/js/particles.js"></script>
+<script src="asset/js/app.js"></script>

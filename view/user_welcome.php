@@ -16,6 +16,8 @@ $_SESSION['user_inform'] = $results;
     </div>
 </header>
 
+<div class="container cont_overflow">
+
 <!-- Welcome Message -->
 <div class="container cont_overflow">
     <div>
