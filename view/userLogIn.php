@@ -10,7 +10,7 @@ if (isset($_SESSION['user_session']) != "") {
 
 <body>
   <div id="particles-js"></div>
-<div>
+<div class="main_login">
     <form method="post" id="login-form">
         <!-- Hercules Logo -->
         <div id="logoName">
