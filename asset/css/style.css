@@ -1,6 +1,9 @@
 html *{
     font-family: 'Source Sans Pro', sans-serif;
+
 }
+
+/* Start Login */
 
 /* For Mobile S */
 @media screen and (max-width:320px){
@@ -56,9 +59,9 @@ html *{
     }
 
     #btn-login{
-        margin-top:2.4em;
+        margin-top:4em;
         color: white;
-        margin-left: 4em;
+        margin-left: 6em;
         width:8em;
     }
 
@@ -135,7 +138,7 @@ and (min-width:321px){
     #btn-login{
         margin-top:4em;
         color: white;
-        margin-left: 5.4em;
+        margin-left: 7.6em;
         width:8em;
     }
 
@@ -226,8 +229,199 @@ and (min-width:376px){
     #btn-login{
         margin-top:4em;
         color: white;
-        margin-left: 6.5em;
+        margin-left: 9.2em;
         width:8em;
     }
+}
+/* End Login */
 
+/* Start Home Page */
+#welcome{
+  margin-top: 6em;
+  font-size: 20px;
+}
+
+#your_workout{
+  margin-top: 0em;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.circular--square{
+  margin-left: 20em;
+  margin-top: -4em;
+  border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  border-bottom-left-radius: 50% 50%;
+}
+
+.box{
+  /* border: 1px solid green; */
+  background-color: #F5F6FA;
+  height: 390px;
+}
+
+#body_part{
+  font-size: 20px;
+  padding-top: 25px;
+  padding-left: 15px;
+  color: #4D4F5C;
+}
+
+#time{
+  padding-left: 15px;
+  color: #4D4F5C;
+}
+
+#table{
+  padding-left: 15px;
+  padding-top: 13px;
+}
+
+.box_2{
+  background-color: #4D4F5C;
+  margin-left: 15px;
+  width:92%;
+  height: 50px;
+  font-size: 20px;
+  padding-bottom: 18px;
+  margin-top: 30px;
+  color: white;
+  padding-left: 25px;
+  padding-right:30px;
+  border-bottom: 2px solid white;
+}
+
+
+.box_3{
+  background-color: #4D4F5C;
+  width:92%;
+  margin-left: 15px;
+  color: white;
+  padding-left: 25px;
+  font-size: 20px;
+  padding-bottom: 18px;
+  height: 10.5em;
+}
+
+#start_button{
+  background-color: #4D4F5C !important;
+  margin-left: 5.3em;
+  margin-top: 2em;
+}
+
+.bottom{
+  position: fixed;
+  background-color: #E7EBFD;
+  height: 4em;
+  width: 110%;
+  margin-left:-1em;
+  margin-top:3em;
+  font-size: 16px;
+  padding-top: 15px;
+}
+
+.bottom a{
+  padding-left: 64px;
+  color: #43425D;
+}
+
+/* For Iphone 6,7,8 */
+@media screen and (max-width:375px)
+and (min-width:321px) and (max-height:667px)
+{
+  #welcome{
+    margin-top: 7.1em;
+    font-size: 15px;
+  }
+
+  #your_workout{
+    margin-top: -1em;
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .circular--square{
+    margin-left: 20em;
+    margin-top: -4em;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+  }
+
+  .box{
+    /* border: 1px solid green; */
+    background-color: #F5F6FA;
+    height: 335px;
+  }
+
+  #body_part{
+    font-size: 15px;
+    padding-top: 25px;
+    padding-left: 15px;
+    color: #4D4F5C;
+  }
+
+  #time{
+    padding-left: 15px;
+    color: #4D4F5C;
+  }
+
+  #table{
+    padding-left: 15px;
+    padding-top: 13px;
+  }
+
+  .box_2{
+    background-color: #4D4F5C;
+    margin-left: 15px;
+    width:92%;
+    height: 50px;
+    font-size: 15px;
+    padding-bottom: 18px;
+    margin-top: 30px;
+    color: white;
+    padding-left: 25px;
+    padding-right:30px;
+    border-bottom: 2px solid white;
+  }
+
+
+  .box_3{
+    background-color: #4D4F5C;
+    width:92%;
+    margin-left: 15px;
+    color: white;
+    padding-left: 25px;
+    font-size: 15px;
+    padding-bottom: 18px;
+    height: 10.5em;
+  }
+
+  #start_button{
+    background-color: #4D4F5C !important;
+    margin-left: 6em;
+    margin-top: 0.2em;
+  }
+
+  #start_button a{
+    font-size: 15px;
+  }
+
+  .bottom{
+    background-color: #E7EBFD;
+    height: 4em;
+    width: 110%;
+    margin-left:-1.4em;
+    margin-top:2.2em;
+    font-size: 15px;
+    padding-top: 15px;
+  }
+
+  .bottom a{
+    padding-left: 68px;
+    color: #43425D;
+  }
 }

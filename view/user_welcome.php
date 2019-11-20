@@ -12,56 +12,67 @@ $_SESSION['user_inform'] = $results;
 <body onload="current_time()">
 <header class="fixed-top">
     <div class="nav-img ">
-        <img src="asset/images/logo_name_fix.png">
+        <img src="asset/images/logo_name.png" height="89" width="375">
     </div>
-    <nav class="navbar_bottom fixed-bottom">
-        <a href="index.php?action=home" class="active">Home</a>
-        <a href=" index.php?action=home">Process</a>
-        <a href="index.php?action=setting" ">Setting</a>
-    </nav>
 </header>
 
+<!-- Welcome Message -->
 <div class="container cont_overflow">
     <div>
-        <h1>Welcome back <?php echo $results[0]['firstname'], " ", $results[0]['lastname']; ?> </h1>
-        <p>Here's your workout today</p>
+        <h1 id="welcome">Welcome back, <b><?php echo $results[0]['firstname'], " ", $results[0]['lastname']; ?> </b></h1>
+        <img class="circular--square" src="asset/images/profile.png" height="50" width="50"/>
+
+        <p id="your_workout">Here's your workout today</p>
+
+        <!-- Box for workout plan -->
+        <div class="box">
         <div>
-            <h2>Body part here</h2>
+            <h5 id="body_part"><b>Body part here</b></h5>
             <div>
-                <span id="time"></span>
+                <b><span id="time"></span></b>
             </div>
         </div>
 
         <!--exercise table here-->
-        <table border="1">
-            <tr>
-                <th>Exercise</th>
-                <th>Sets</th>
+      <div class="box_2">
+        <div id="table">
+          <th>
+            <tr>EXERCISES</tr>
+            <tr>SETS</tr>
+          </th>
+        </div>
+      </div>
 
-            </tr>
-            <tr>
-
-                <!--
-            <?php //foreach ($currencies as $currency) : ?>
-                <tr>
-                    <td><?php //echo $currency['currency_name']; ?></td>
-                    <td><?php //echo $currency['quantity']; ?></td>
-                </tr>
-            <?php //endforeach; ?>
-            -->
-            </tr>
+      <div class="box_3">
+        <div id="table">
+          <th>
+            <tr>BENCH PRESS</tr>
+            <tr>4</tr>
+          </th>
+        </div>
+      </div>
 
 
-        </table>
+      </div>
+      <!-- End of Box for workout plan -->
+
     </div>
     <br>
     <div>
-        <button class="butttons_dark">
-            <a href="index.php?action=start_workout" >START WORKOUT</a>
+        <button id="start_button" class="btn-default btn-lg">
+            <a href="index.php?action=start_workout" style="color:white;">START WORKOUT</a>
         </button>
         <br>
     </div>
 
+    <!-- Page Selection -->
+    <div class="bottom">
+      <nav>
+        <a href="index.php?action=home" class="active">Home</a>
+        <a href=" index.php?action=home">History</a>
+        <a href="index.php?action=setting">Setting</a>
+      </nav>
+    </div>
 
 </div>
 </body>

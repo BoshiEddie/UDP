@@ -1,6 +1,6 @@
 <?php
 
-require('model/database.php');
+require('model/Database.php');
 require_once 'model/clientDataService.php';
 require_once 'model/Client.php';
 
