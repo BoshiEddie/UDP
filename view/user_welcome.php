@@ -40,6 +40,7 @@ $_SESSION['user_inform'] = $results;
         <div id="table">
           <th>
             <tr>EXERCISES</tr>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
             <tr>SETS</tr>
           </th>
         </div>
@@ -49,6 +50,7 @@ $_SESSION['user_inform'] = $results;
         <div id="table">
           <th>
             <tr>BENCH PRESS</tr>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
             <tr>4</tr>
           </th>
         </div>
