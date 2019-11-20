@@ -10,12 +10,13 @@ include 'asset/include/header.php';
         }
     </style>
 </head>
-<body onload="timer()">
+<body onload="timer()" id="workout_body">
 
 <header class="fixed-top">
 
 </header>
-<div class="container cont_overflow">
+
+<div class="container cont_overflow" id="in_workout">
 
     <div class="header" id="myHeader">
 
@@ -89,6 +90,7 @@ include 'asset/include/header.php';
             <tr>
                 <td class="ex1set">2</td>
                 <td>12</td>
+                <!-- <input type="text" name="" value="0" style="text-align:center"> -->
                 <td>0</td>
             </tr>
             <tr>
@@ -124,6 +126,7 @@ include 'asset/include/header.php';
           </button>
     </div>
 </div>
+
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript">
