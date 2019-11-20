@@ -28,6 +28,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="asset/css/style.css">
     <link rel="stylesheet" href="asset/css/setting.css">
+    <link rel="stylesheet" href="asset/css/workout.css">
 
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -36,12 +37,15 @@
     <link rel="stylesheet" href="asset/css/bootstrap.css">
     <link rel="stylesheet" href="asset/css/bootstrap-grid.css">
     <link rel="stylesheet" href="asset/css/bootstrap-reboot.css">
-    <!-- CSS -->
-    <link rel="stylesheet" href="asset/css/style.css">
-
 
     <!-- JS Animation -->
     <script src="asset/js/particles.js"></script>
     <script src="asset/js/app.js"></script>
+
+
+    <script src="asset/js/fixed_header.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="asset/font-awesome/all.css">
 
 </head>

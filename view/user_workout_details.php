@@ -13,34 +13,65 @@ include 'asset/include/header.php';
 <body onload="timer()">
 
 <header class="fixed-top">
-    <div class="nav-img ">
-        <img src="asset/images/logo_name_fix.png">
-    </div>
-    <nav class="navbar_bottom fixed-bottom">
-        <a href="index.php?action=home" class="active">Home</a>
-        <a href=" index.php?action=home">Process</a>
-        <a href="index.php?action=setting" ">Setting</a>
-    </nav>
+
 </header>
 <div class="container cont_overflow">
+
+    <div class="header" id="myHeader">
+
+    <!-- Div for workout timer -->
     <div>
         <div id="count">
+          <b>
             <span id="id_H">00</span>
+            <span>:</span>
             <span id="id_M">00</span>
+            <span>:</span>
             <span id="id_S">00</span>
+          </b>
         </div>
-        <input id="pause" type="button" value="pause">
-        <input id="start" type="button" value="start">
+        <p id="duration">Duration</p>
+
+        <!-- <input id="pause" type="button" value="pause">
+        <input id="start" type="button" value="start"> -->
+    </div>
+
+    <!-- Div for rest and finish -->
+    <!-- <span id="stopwatch" class="fas fa-stopwatch fa-lg"></span>
+    <span class="fas fa-check fa-lg"></span> -->
+
+    <div class="rest_finish_1">
+      &nbsp
+
+      <span id="stopwatch" class="fas fa-stopwatch fa-lg"></span>
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+      <span class="fas fa-check fa-lg"></span>
+
+      <div class="rest_finish">
+
+        <span id="pause" type="button" value="pause">Rest</span>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <span id="finish">Finish</span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+    <div class="border">
+
     </div>
 
 
-    <div>
-        <h2>Body part here</h2>
+    <div class="details">
+        <h2 id="workout_title">Body part here</h2>
 
         <!--exercise table here-->
-        <table border="1">
-            <thead>
-            <tr>
+        <table border="1" width=357 height=500>
+            <thead class="thead">
+            <tr height=70>
                 <th>Exercise</th>
                 <th>Sets</th>
                 <th>Reps</th>
@@ -48,7 +79,7 @@ include 'asset/include/header.php';
             </tr>
             </thead>
 
-            <tbody>
+            <tbody class="tbody">
             <tr>
                 <td rowspan="3" id="ex1">Exercise1</td>
                 <td class="ex1set">1</td>
@@ -85,8 +116,12 @@ include 'asset/include/header.php';
         </table>
     </div>
     <br>
-    <div>
-        <button id="finish_workout" class="butttons_dark">FINISH WORKOUT</button>
+
+    <!-- Finish workout button -->
+    <div class="buttons">
+          <button class="btn-primary btn-lg" id="finish_workout" style="color:#43425D;">
+              <b>FINISH WORKOUT</b>
+          </button>
     </div>
 </div>
 </body>
@@ -175,8 +210,26 @@ include 'asset/include/header.php';
                 $(n).addClass("notFinish");
             })
         });
-    }
-    ;
+    };
+
+    //Fixed header
+    // When the user scrolls the page, execute myFunction
+// window.onscroll = function() {myFunction()};
+//
+// // Get the header
+// var header = document.getElementById("myHeader");
+//
+// // Get the offset position of the navbar
+// var sticky = header.offsetTop;
+//
+// // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+// function myFunction() {
+//   if (window.pageYOffset > sticky) {
+//     header.classList.add("sticky");
+//   } else {
+//     header.classList.remove("sticky");
+//   }
+// }
 
 </script>
 </html>
