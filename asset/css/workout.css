@@ -59,12 +59,39 @@ table{
   border: 0;
 }
 
+.header{
+  background-color: #E7EBFD;
+  top: 0;
+  width: 110%;
+  overflow: hidden;
+  position: fixed;
+  margin-left: -1.2em;
+}
+
+#count{
+  margin-left: 30px;
+}
+
+#duration{
+  margin-left: 30px;
+}
+
+.rest_finish_1
+{
+  margin-left: 19em;
+  margin-bottom: 2em;
+}
+
+.details{
+  margin-top: 7em;
+}
+
 /* For iphone 6,7,8 */
 @media screen and (max-width:375px)
 and (min-width:321px) and (max-height:667px)
 {
-  body{
-    overflow-y: auto;
+  #workout_body{
+    overflow: auto;
   }
 
   #finish_workout{
@@ -102,7 +129,6 @@ and (min-width:321px) and (max-height:667px)
   .details{
     margin-top: 7em;
   }
-
 
 
 

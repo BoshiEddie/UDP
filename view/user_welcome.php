@@ -70,7 +70,7 @@ $_SESSION['user_inform'] = $results;
     </div>
 
     <!-- Page Selection -->
-    <div class="bottom">
+    <!-- <div class="bottom">
       <nav>
         <a href="index.php?action=home" class="active">Home</a>
         <a href=" index.php?action=home">History</a>
@@ -78,7 +78,16 @@ $_SESSION['user_inform'] = $results;
       </nav>
     </div>
 
+</div> -->
+
+<div class="navbar" id="navbar_welcome">
+  <a href="index.php?action=home" class="active"><i class="fas fa-home"></i>&nbspHome</a>
+  <a href="index.php?action=home"><i class="fas fa-chart-line"></i>&nbspHistory</a>
+  <a href="index.php?action=setting"><i class="fas fa-cog"></i>&nbspSetting</a>
 </div>
+
+
+
 </body>
 <?php include 'asset/include/footer.php'; ?>
 
