@@ -8,37 +8,36 @@ $client_information = $_SESSION['user_inform'][0];
 <body>
 <header class="fixed-top">
     <div class="nav-img ">
-        <img src="asset/images/logo_name_fix.png">
+      <img src="asset/images/logo_name.png" height="89" width="375">
+
     </div>
-    <nav class="navbar_bottom fixed-bottom">
-        <a href="index.php?action=home">Home</a>
-        <a href="index.php?action=home">Process</a>
-        <a href="index.php?action=setting" class="active">Setting</a>
-    </nav>
+
 </header>
 
 
 <div class="container cont_overflow">
     <!-- user profile   -->
     <div class="user_profile mx-auto border-bottom">
-        <div class="profile_img">
-            <img src="asset/images/JayBrady1.jpg">
-        </div>
         <div class="profile_details">
-            <p class="font-weight-bolder">
+          <div class="profile_image">
+            <img class="circular--square" src="asset/images/profile.png" height="50" width="50"/>
+          </div>
+
+            <p class="font-weight-bolder" id="name">
                 <?php echo $client_information['firstname'], " ", $client_information['lastname']; ?>
             </p>
-            <p class="font-weight-lighter">
+
+            <p class="font-weight-lighter" id="address">
                 <?php echo $client_information['address'] ?>
             </p>
-            <p class="font-weight-lighter">
+            <p class="font-weight-lighter" id="phone">
                 <?php echo $client_information['phone_number'] ?>
             </p>
         </div>
     </div>
     <!-- user data   -->
     <div class="user_data mx-auto">
-        <h5>My Info</h5>
+        <h4>My Info</h4>
         <table class="table table-bordered table-hover">
             <tbody>
             <tr>
@@ -62,9 +61,9 @@ $client_information = $_SESSION['user_inform'][0];
     </div>
     <!-- user's trainer-->
     <div class="trainer_profile mx-auto border-bottom">
-        <h5>My Trainer</h5>
-        <div class="profile_img">
-            <img src="asset/images/KenColeman.jpg">
+        <h4>My Trainer</h4>
+        <div class="profile_image_trainer">
+          <img id="trainer_image"class="circular--square--trainer" src="asset/images/profile.png" height="50" width="50"/>
         </div>
         <div class="profile_details">
             <p class="font-weight-bolder">
@@ -80,14 +79,31 @@ $client_information = $_SESSION['user_inform'][0];
     </div>
 
     <br><br><br>
-    <div>
-        <button class="butttons">
-            <a href="model/logout.php"><i aria-hidden="true"></i> &nbsp;Sign Out</a>
-        </button>
-        <button class="butttons">
-            <a href=""><i aria-hidden="true"></i> &nbsp;Reset Password</a>
-        </button>
+    <div class="buttons">
+          <button class="btn-primary btn-lg" id="signout">
+              <a href="model/logout.php" style="color:#43425D;">Sign Out</a>
+          </button>
 
+          <button class="btn-primary btn-lg" id="reset">
+              <a href="" style="color:#43425D;">Reset Password</a>
+          </button>
+
+        <!-- <button class="butttons">
+            <a href="model/logout.php"><i aria-hidden="true"></i> &nbsp;Sign Out</a>
+        </button> -->
+        <!-- <button class="butttons">
+            <a href=""><i aria-hidden="true"></i> &nbsp;Reset Password</a>
+        </button> -->
+
+    </div>
+
+    <!-- Page Selection -->
+    <div class="bottom_setting">
+      <nav>
+        <a href="index.php?action=home" class="active">Home</a>
+        <a href=" index.php?action=home">History</a>
+        <a href="index.php?action=setting">Setting</a>
+      </nav>
     </div>
 
 </div>
