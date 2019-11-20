@@ -13,9 +13,9 @@
 
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-        <!-- login -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <!-- login -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="asset/js/validation.min.js"></script>
     <script type="text/javascript" src="asset/js/script.js"></script>
@@ -27,6 +27,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="asset/css/setting.css">
+    <link rel="stylesheet" href="asset/css/workout.css">
 
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -35,6 +37,15 @@
     <link rel="stylesheet" href="asset/css/bootstrap.css">
     <link rel="stylesheet" href="asset/css/bootstrap-grid.css">
     <link rel="stylesheet" href="asset/css/bootstrap-reboot.css">
-    <!-- CSS -->
-    <link rel="stylesheet" href="asset/css/style.css">
+
+    <!-- JS Animation -->
+    <script src="asset/js/particles.js"></script>
+    <script src="asset/js/app.js"></script>
+
+
+    <script src="asset/js/fixed_header.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="asset/font-awesome/all.css">
+
 </head>
