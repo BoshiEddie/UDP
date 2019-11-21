@@ -47,7 +47,7 @@ $('document').ready(function () {
                         '<div class="spinner-border text-success ;" role="status">\n' +
                         ' <span class="sr-only">Loading....</span>\n' +
                         '</div> Signing    In ...');
-                    setTimeout(' window.location.href = "index.php?action=user_inform"; ', 2000);
+                    setTimeout(' window.location.href = "index.php?action=home"; ', 2000);
                 } else {
 
                     $("#error").fadeIn(1000, function () {
