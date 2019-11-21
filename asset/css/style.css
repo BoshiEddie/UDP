@@ -1,0 +1,512 @@
+html *{
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+/* Start Login */
+
+/* For Mobile S */
+@media screen and (max-width:320px){
+    #logoName{
+        margin-left: 3em;
+    }
+
+    #logo{
+        /* margin-top: -10em;
+        margin-left: -24em; */
+        margin-top: -12.6em;
+        margin-left: -2.4em;
+    }
+
+    /* Login Section */
+    .phoneLogin{
+        text-align: center;
+    }
+
+    #username{
+        margin-top: 5em;
+    }
+
+    .passwordLogin{
+        text-align: center;
+        margin-top: 3em;
+    }
+    #password{
+        margin-top: 0.4em;
+    }
+
+    #remember{
+        margin-top: 5em;
+        margin-left: 5em;
+    }
+
+    #checkbox{
+        margin-left: -3em;
+        margin-right: 2px;
+    }
+
+    #fpassword{
+        margin-top: -1.45em;
+    }
+
+    #forget{
+        margin-left: 14.5em;
+        margin-top: 3em;
+    }
+
+    .buttton{
+        text-align: center;
+    }
+
+    #btn-login{
+        margin-top:4em;
+        color: white;
+        margin-left: 6em;
+        width:8em;
+    }
+
+    #phone_number{
+        border:none;
+        outline: none;
+        background: none;
+        border-bottom: 1px solid rgba(0,0,0,0.4);
+    }
+
+    #password{
+        border:none;
+        outline: none;
+        background: none;
+        border-bottom: 1px solid rgba(0,0,0,0.4);
+    }
+}
+
+
+/* For Mobile M */
+@media screen and (max-width:375px)
+and (min-width:321px){
+    #logoName{
+        margin-left: 5em;
+    }
+
+    #logo{
+        /* margin-top: -10em;
+        margin-left: -24em; */
+        margin-top: -13.4em;
+        margin-left: -2em;
+    }
+
+    /* Login Section */
+    .phoneLogin{
+        text-align: center;
+    }
+
+    #username{
+        margin-top: 5em;
+    }
+
+    .passwordLogin{
+        text-align: center;
+        margin-top: 3em;
+    }
+    #password{
+        margin-top: 0.4em;
+    }
+
+    #remember{
+        margin-top: 5em;
+        margin-left: 5em;
+    }
+
+    #checkbox{
+        margin-left: -3em;
+        margin-right: 2px;
+    }
+
+    #fpassword{
+        margin-top: -1.45em;
+    }
+
+    #forget{
+        margin-left: 14.5em;
+        margin-top: 3em;
+    }
+
+    .buttton{
+        text-align: center;
+    }
+
+    #btn-login{
+        margin-top:4em;
+        color: white;
+        margin-left: 9.3em;
+        width:8em;
+    }
+
+    #phone_number{
+        border:none;
+        outline: none;
+        background: none;
+        border-bottom: 1px solid rgba(0,0,0,0.4);
+    }
+
+    #password{
+        border:none;
+        outline: none;
+        background: none;
+        border-bottom: 1px solid rgba(0,0,0,0.4);
+    }
+}
+
+/* For Mobile L */
+@media screen and (max-width:425px)
+and (min-width:376px){
+    #logoName{
+        margin-left: 6em;
+    }
+
+    #logo{
+        /* margin-top: -10em;
+        margin-left: -24em; */
+        margin-top: -12.6em;
+        margin-left: -2em;
+    }
+
+    /* Login Section */
+    .phoneLogin{
+        text-align: center;
+    }
+
+    #username{
+        margin-top: 5em;
+    }
+
+    .passwordLogin{
+        text-align: center;
+        margin-top: 3em;
+    }
+    #password{
+        margin-top: 0.4em;
+    }
+
+    #remember{
+        margin-top: 5em;
+        margin-left: 5em;
+    }
+
+    #checkbox{
+        margin-left: -3em;
+        margin-right: 2px;
+    }
+
+    #fpassword{
+        margin-top: -1.45em;
+    }
+
+    #forget{
+        margin-left: 14.5em;
+        margin-top: 3em;
+    }
+
+    .buttton{
+        text-align: center;
+    }
+
+    #phone_number{
+        border:none;
+        outline: none;
+        background: none;
+        border-bottom: 1px solid rgba(0,0,0,0.4);
+    }
+
+    #password{
+        border:none;
+        outline: none;
+        background: none;
+        border-bottom: 1px solid rgba(0,0,0,0.4);
+    }
+
+    /* Login Button */
+    #btn-login{
+        margin-top:4em;
+        color: white;
+        margin-left: 9.2em;
+        width:8em;
+    }
+}
+/* End Login */
+
+/* Start Home Page */
+#welcome{
+  margin-top: 6em;
+  font-size: 20px;
+}
+
+#your_workout{
+  margin-top: 0em;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.circular--square{
+  margin-left: 20em;
+  margin-top: -4em;
+  border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  border-bottom-left-radius: 50% 50%;
+}
+
+.box{
+  /* border: 1px solid green; */
+  background-color: #F5F6FA;
+  height: 390px;
+}
+
+#body_part{
+  font-size: 20px;
+  padding-top: 25px;
+  padding-left: 15px;
+  color: #4D4F5C;
+}
+
+#time{
+  padding-left: 15px;
+  color: #4D4F5C;
+}
+
+#table{
+  padding-left: 15px;
+  padding-top: 13px;
+}
+
+.box_2{
+  background-color: #4D4F5C;
+  margin-left: 14px;
+  width:92%;
+  height: 50px;
+  font-size: 20px;
+  padding-bottom: 18px;
+  margin-top: 30px;
+  color: white;
+  padding-left: 25px;
+  padding-right:30px;
+  border-bottom: 2px solid white;
+}
+
+
+.box_3{
+  background-color: #4D4F5C;
+  width:92%;
+  margin-left: 14px;
+  color: white;
+  padding-left: 25px;
+  font-size: 20px;
+  padding-bottom: 18px;
+  height: 10.5em;
+}
+
+#start_button{
+  background-color: #4D4F5C !important;
+  margin-left: 4.3em;
+  margin-top: 2em;
+}
+
+.bottom{
+  background-color: #E7EBFD;
+  height: 4em;
+  width: 120%;
+  margin-left:-2.2em;
+  margin-top:2.5em;
+  font-size: 16px;
+  padding-top: 20px;
+}
+
+.bottom a{
+  padding-left: 65px;
+  color: #43425D;
+}
+
+/* For Iphone 6,7,8 */
+@media screen and (max-width:375px)
+and (min-width:321px) and (max-height:667px)
+{
+  #welcome{
+    margin-top: 7.1em;
+    font-size: 15px;
+  }
+
+  #your_workout{
+    margin-top: -1em;
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .circular--square{
+    margin-left: 20em;
+    margin-top: -4em;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+  }
+
+  .box{
+    /* border: 1px solid green; */
+    background-color: #F5F6FA;
+    height: 335px;
+  }
+
+  #body_part{
+    font-size: 15px;
+    padding-top: 25px;
+    padding-left: 15px;
+    color: #4D4F5C;
+  }
+
+  #time{
+    padding-left: 15px;
+    color: #4D4F5C;
+  }
+
+  #table{
+    padding-left: 15px;
+    padding-top: 13px;
+  }
+
+  .box_2{
+    background-color: #4D4F5C;
+    margin-left: 13px;
+    width:92%;
+    height: 50px;
+    font-size: 15px;
+    padding-bottom: 18px;
+    margin-top: 30px;
+    color: white;
+    padding-left: 25px;
+    padding-right:30px;
+    border-bottom: 2px solid white;
+  }
+
+
+  .box_3{
+    background-color: #4D4F5C;
+    width:92%;
+    margin-left: 13px;
+    color: white;
+    padding-left: 25px;
+    font-size: 15px;
+    padding-bottom: 18px;
+    height: 10.5em;
+  }
+
+  #start_button{
+    background-color: #4D4F5C !important;
+    margin-left: 5em;
+    margin-top: 0.2em;
+  }
+
+  #start_button a{
+    font-size: 15px;
+  }
+
+  .bottom{
+    background-color: #E7EBFD;
+    height: 4em;
+    width: 120%;
+    margin-left:-2.3em;
+    margin-top:1.9em;
+    font-size: 15px;
+    padding-top: 17px;
+  }
+
+  .bottom a{
+    padding-left: 68px;
+    color: #43425D;
+  }
+
+  /* Navbar */
+  .navbar {
+    overflow: hidden;
+    background-color: #E7EBFD;
+    position: fixed;
+    bottom: 0;
+    width: 119%;
+    margin-top: -10em;
+    margin-left: -2.16em;
+  }
+
+  .navbar a {
+    float: center;
+    display: block;
+    color: grey;
+    text-align: left;
+    padding: 16px 19px;
+    text-decoration: none;
+    font-size: 13px;
+    padding-left: 10px;
+  }
+
+  .navbar a:hover {
+    background: #E7EBFD;
+    color: black;
+  }
+
+  .navbar a.active {
+    color: black;
+  }
+
+  #navbar_welcome{
+    margin-top: 1.2em;
+    margin-left: -2.2em;
+  }
+
+
+}
+
+/* Particle Animation */
+#particles-js{
+  position: absolute;
+  z-index: -999;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+.main_login{
+	z-index:  999;
+}
+
+/* Navbar */
+.navbar {
+  overflow: hidden;
+  background-color: #E7EBFD;
+  position: fixed;
+  bottom: 0;
+  width: 119%;
+  margin-top: 2.5em;
+  margin-left: -2.16em;
+}
+
+.navbar a {
+  float: center;
+  display: block;
+  color: grey;
+  text-align: left;
+  padding: 16px 19px;
+  text-decoration: none;
+  font-size: 17px;
+  padding-left: 10px;
+}
+
+.navbar a:hover {
+  background: #E7EBFD;
+  color: black;
+}
+
+.navbar a.active {
+  color: black;
+}
+
+#home{
+  padding-left: 45px;
+}

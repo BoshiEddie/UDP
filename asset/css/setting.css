@@ -1,0 +1,187 @@
+.circular--square{
+  border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  border-bottom-left-radius: 50% 50%;
+}
+
+.profile_details{
+  font-size: 16px;
+}
+
+.profile_image{
+  margin-top: 13em;
+  margin-left: -2em;
+
+}
+
+#name{
+  margin-top: -3.4em;
+
+}
+
+.user_data{
+  font-size: 15px;
+}
+
+.bottom_setting{
+  background-color: #E7EBFD;
+  height: 4em;
+  width: 110%;
+  margin-left:-1.2em;
+  margin-top:3.3em;
+  font-size: 16px;
+  padding-top: 20px;
+}
+
+.bottom_setting a{
+  padding-left: 65px;
+  color: #43425D;
+}
+
+.trainer_profile{
+  font-size: 15px;
+  margin-top: 3em;
+}
+
+.circular--square--trainer{
+  border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  border-bottom-left-radius: 50% 50%;
+}
+
+.profile_image_trainer{
+  margin-top: -1em;
+  margin-left: 19em;
+
+}
+
+.profile_details{
+  margin-top: -2em;
+}
+
+.buttons{
+  margin-left: 3em;
+  margin-top: -1em;
+}
+
+#signout{
+  margin-right: 20px;
+  background-color: #E7EBFD !important;
+  border: 0;
+}
+
+#reset{
+  background-color: #E7EBFD !important;
+  border: 0;
+}
+
+/* For iphone 6,7,8 */
+@media screen and (max-width:375px)
+and (min-width:321px) and (max-height:667px)
+{
+
+  .circular--square{
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+  }
+
+  .profile_details{
+    font-size: 14px;
+  }
+
+  .profile_image{
+    margin-top: 13em;
+    margin-left: 1.5em;
+
+  }
+
+  #name{
+    margin-top: -3.5em;
+
+  }
+
+  .user_data{
+    font-size: 13px;
+  }
+
+  .bottom_setting{
+    background-color: #E7EBFD;
+    height: 4em;
+    width: 110%;
+    margin-left:-1.4em;
+    margin-top:1.8em;
+    font-size: 14px;
+    padding-top: 17px;
+  }
+
+  .bottom_setting a{
+    padding-left: 68px;
+    color: #43425D;
+  }
+
+  .trainer_profile{
+    margin-top: 1.7em;
+  }
+
+  .profile_details{
+    font-size: 13px;
+  }
+
+  .circular--square--trainer{
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+  }
+
+  .profile_image_trainer{
+    margin-top: -1.2em;
+    margin-left: 19em;
+  }
+
+  #trainer_image{
+    margin-top: 0em;
+  }
+
+  .profile_details{
+    margin-top: -2.3em;
+    margin-bottom: 1em;
+  }
+
+  .buttons{
+    margin-left: 5em;
+    margin-top: -2.5em;
+  }
+
+  #signout{
+    margin-right: 20px;
+    background-color: #E7EBFD !important;
+    border: 0;
+    font-size: 13px;
+  }
+
+  #reset{
+    background-color: #E7EBFD !important;
+    border: 0;
+    font-size: 13px;
+
+  }
+
+  #navbar_setting{
+    margin-top: 1.2em;
+
+  }
+
+  #navbar_settings a{
+    font-size: 13px;
+  }
+
+  table tr td{
+    font-size: 12px;
+  }
+
+}

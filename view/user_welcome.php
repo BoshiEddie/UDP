@@ -1,7 +1,7 @@
 <?php
 session_start();
 $title = 'Welcome';
-include 'include/header.php';
+include 'asset/include/header.php';
 
 $c = new clientDataService();
 $phone_number = $_SESSION['user_session'];
@@ -10,57 +10,92 @@ $_SESSION['user_inform'] = $results;
 ?>
 
 <body onload="current_time()">
-<nav class="nav navbar-dark">
-    <a href="index.php?action=home">Home</a>
-    <a href="index.php?action=home">Process</a>
-    <a href="index.php?action=setting">Setting</a>
-</nav>
+<header class="fixed-top">
+    <div class="nav-img ">
+        <img src="asset/images/logo_name.png" height="89" width="375">
+    </div>
+</header>
 
-<div id=" content">
+<div class="container cont_overflow">
+
+<!-- Welcome Message -->
+<div class="container cont_overflow">
     <div>
+        <div  class="animated fadeInUp">
+        <h1 id="welcome">Welcome back, <b><?php echo $results[0]['firstname'], " ", $results[0]['lastname']; ?> </b></h1>
+        <img class="circular--square" src="asset/images/profile.png" height="50" width="50"/>
 
+        <p id="your_workout">Here's your workout today</p>
 
-        <!--change 'card_holder' to the column name here    -->
-        <h1>Welcome back <?php echo $results[0]['firstname'], " ", $results[0]['lastname']; ?> </h1>
-        <p>Here's your workout today</p>
+        </div>
+        <!-- Box for workout plan -->
+        <div class="animated fadeIn delay-1s">
 
-
+        <div class="box">
         <div>
-            <h2>Body part here</h2>
+            <h5 id="body_part"><b>Body part here</b></h5>
             <div>
-                <span id="time"></span>
+                <b><span id="time"></span></b>
             </div>
         </div>
 
         <!--exercise table here-->
-        <table border="1">
-            <tr>
-                <th>Exercise</th>
-                <th>Sets</th>
+      <div class="box_2">
+        <div id="table">
+          <th>
+            <tr>EXERCISES</tr>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <tr>SETS</tr>
+          </th>
+        </div>
+      </div>
 
-            </tr>
-            <tr>
-
-                <!--
-            <?php //foreach ($currencies as $currency) : ?>
-                <tr>
-                    <td><?php //echo $currency['currency_name']; ?></td>
-                    <td><?php //echo $currency['quantity']; ?></td>
-                </tr>
-            <?php //endforeach; ?>
-            -->
-            </tr>
+      <div class="box_3">
+        <div id="table">
+          <th>
+            <tr>BENCH PRESS</tr>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <tr>4</tr>
+          </th>
+        </div>
+      </div>
 
 
-        </table>
+      </div>
+
+      <!-- End of Box for workout plan -->
+
     </div>
-    <button>
-        <a href="index.php?action=start_workout">START WORKOUT</a>
-    </button>
+  </div>
     <br>
+    <div class="animated fadeIn delay-1s">
+        <button id="start_button" class="btn-default btn-lg">
+            <a href="index.php?action=start_workout" style="color:white;">START WORKOUT</a>
+        </button>
+        <br>
+    </div>
+    </div>
 
+    <!-- Page Selection -->
+    <!-- <div class="bottom">
+      <nav>
+        <a href="index.php?action=home" class="active">Home</a>
+        <a href=" index.php?action=home">History</a>
+        <a href="index.php?action=setting">Setting</a>
+      </nav>
+    </div>
+
+</div> -->
+
+<div class="navbar" id="navbar_welcome">
+  <a href="index.php?action=home" class="active"><i class="fas fa-home"></i>&nbspHome</a>
+  <a href="index.php?action=home"><i class="fas fa-chart-line"></i>&nbspHistory</a>
+  <a href="index.php?action=setting"><i class="fas fa-user"></i>&nbspProfile</a>
 </div>
+
+
+
 </body>
-<?php include 'include/footer.php'; ?>
+<?php include 'asset/include/footer.php'; ?>
 
 </html>
