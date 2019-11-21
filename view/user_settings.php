@@ -111,7 +111,7 @@ $client_information = $_SESSION['user_inform'][0];
       <div class="navbar" id="navbar_setting">
         <a href="index.php?action=home" class="active"><i class="fas fa-home"></i>&nbspHome</a>
         <a href="index.php?action=home"><i class="fas fa-chart-line"></i>&nbspHistory</a>
-        <a href="index.php?action=setting"><i class="fas fa-cog"></i>&nbspSetting</a>
+        <a href="index.php?action=setting"><i class="fas fa-user"></i>&nbspProfile</a>
       </div>
 
 
