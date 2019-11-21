@@ -8,29 +8,29 @@ $client_information = $_SESSION['user_inform'][0];
 <body>
 <header class="fixed-top">
     <div class="nav-img ">
-      <img src="asset/images/logo_name.png" height="89" width="375">
-
+        <img src="asset/images/logo_name.png">
     </div>
-
+    <div class="navbar navbar-fixed-bottom">
+        <a href="index.php?action=home"><i class="fas fa-home"></i>&nbspHome</a>
+        <a href="index.php?action=history"><i class="fas fa-chart-line"></i>&nbspHistory</a>
+        <a href="index.php?action=profile" class="active"><i class="fas fa-user"></i>&nbspProfile</a>
+    </div>
 </header>
-
 
 <div class="container cont_overflow">
     <!-- user profile   -->
     <div class="user_profile mx-auto border-bottom">
+        <div class="profile_img">
+            <img src="asset/images/profile.png">
+        </div>
         <div class="profile_details">
-          <div class="profile_image">
-            <img class="circular--square" src="asset/images/profile.png" height="50" width="50"/>
-          </div>
-
-            <p class="font-weight-bolder" id="name">
+            <p class="font-weight-bolder">
                 <?php echo $client_information['firstname'], " ", $client_information['lastname']; ?>
             </p>
-
-            <p class="font-weight-lighter" id="address">
+            <p class="font-weight-lighter">
                 <?php echo $client_information['address'] ?>
             </p>
-            <p class="font-weight-lighter" id="phone">
+            <p class="font-weight-lighter">
                 <?php echo $client_information['phone_number'] ?>
             </p>
         </div>
@@ -61,9 +61,9 @@ $client_information = $_SESSION['user_inform'][0];
     </div>
     <!-- user's trainer-->
     <div class="trainer_profile mx-auto border-bottom">
-        <h4>My Trainer</h4>
-        <div class="profile_image_trainer">
-          <img id="trainer_image"class="circular--square--trainer" src="asset/images/profile.png" height="50" width="50"/>
+        <h5>My Trainer</h5>
+        <div class="profile_img">
+            <img src="asset/images/profile.png">
         </div>
         <div class="profile_details">
             <p class="font-weight-bolder">
@@ -80,43 +80,14 @@ $client_information = $_SESSION['user_inform'][0];
 
     <br><br><br>
     <div class="buttons">
-          <button class="btn-primary btn-lg" id="signout">
-              <a href="model/logout.php" style="color:#43425D;">Sign Out</a>
-          </button>
+        <button class="btn-primary btn-lg" id="signout">
+            <a href="model/logout.php" style="color:#43425D;">Sign Out</a>
+        </button>
 
-          <button class="btn-primary btn-lg" id="reset">
-              <a href="" style="color:#43425D;">Reset Password</a>
-          </button>
-
-        <!-- <button class="butttons">
-            <a href="model/logout.php"><i aria-hidden="true"></i> &nbsp;Sign Out</a>
-        </button> -->
-        <!-- <button class="butttons">
-            <a href=""><i aria-hidden="true"></i> &nbsp;Reset Password</a>
-        </button> -->
-
+        <!--          <button class="btn-primary btn-lg" id="reset">-->
+        <!--              <a href="" style="color:#43425D;">Reset Password</a>-->
+        <!--          </button>-->
     </div>
-
-    <!-- Page Selection -->
-    <!-- <div class="bottom_setting">
-      <nav>
-        <a href="index.php?action=home" class="active">Home</a>
-        <a href=" index.php?action=home">History</a>
-        <a href="index.php?action=setting">Setting</a>
-      </nav>
-    </div> -->
-
-
-
-      <div class="navbar" id="navbar_setting">
-        <a href="index.php?action=home" class="active"><i class="fas fa-home"></i>&nbspHome</a>
-        <a href="index.php?action=home"><i class="fas fa-chart-line"></i>&nbspHistory</a>
-        <a href="index.php?action=setting"><i class="fas fa-user"></i>&nbspProfile</a>
-      </div>
-
-
-
-
 </div>
 </body>
 <?php include 'asset/include/footer.php'; ?>
@@ -140,7 +111,6 @@ $client_information = $_SESSION['user_inform'][0];
         $("#height").html(height);
         $("#medical_issues").html(medical_issues);
     });
-
 
 
 </script>
