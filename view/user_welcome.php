@@ -21,12 +21,16 @@ $_SESSION['user_inform'] = $results;
 <!-- Welcome Message -->
 <div class="container cont_overflow">
     <div>
+        <div  class="animated fadeInUp">
         <h1 id="welcome">Welcome back, <b><?php echo $results[0]['firstname'], " ", $results[0]['lastname']; ?> </b></h1>
         <img class="circular--square" src="asset/images/profile.png" height="50" width="50"/>
 
         <p id="your_workout">Here's your workout today</p>
 
+        </div>
         <!-- Box for workout plan -->
+        <div class="animated fadeIn delay-1s">
+
         <div class="box">
         <div>
             <h5 id="body_part"><b>Body part here</b></h5>
@@ -58,15 +62,18 @@ $_SESSION['user_inform'] = $results;
 
 
       </div>
+
       <!-- End of Box for workout plan -->
 
     </div>
+  </div>
     <br>
-    <div>
+    <div class="animated fadeIn delay-1s">
         <button id="start_button" class="btn-default btn-lg">
             <a href="index.php?action=start_workout" style="color:white;">START WORKOUT</a>
         </button>
         <br>
+    </div>
     </div>
 
     <!-- Page Selection -->
@@ -83,7 +90,7 @@ $_SESSION['user_inform'] = $results;
 <div class="navbar" id="navbar_welcome">
   <a href="index.php?action=home" class="active"><i class="fas fa-home"></i>&nbspHome</a>
   <a href="index.php?action=home"><i class="fas fa-chart-line"></i>&nbspHistory</a>
-  <a href="index.php?action=setting"><i class="fas fa-cog"></i>&nbspSetting</a>
+  <a href="index.php?action=setting"><i class="fas fa-user"></i>&nbspProfile</a>
 </div>
 
 
