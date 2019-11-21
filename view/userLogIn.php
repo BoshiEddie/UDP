@@ -3,13 +3,14 @@ $title = 'User Login';
 include 'asset/include/header.php';
 session_start();
 if (isset($_SESSION['user_session']) != "") {
-    header("location:index.php?action=user_inform");
+    header("location:index.php?action=home");
 }
 ?>
 
 
 <body>
-<div>
+  <div id="particles-js"></div>
+<div class="main_login">
     <form method="post" id="login-form">
         <!-- Hercules Logo -->
         <div id="logoName">
@@ -49,3 +50,6 @@ if (isset($_SESSION['user_session']) != "") {
 
 <?php include 'asset/include/footer.php'; ?>
 </body>
+
+<script src="asset/js/particles.js"></script>
+<script src="asset/js/app.js"></script>

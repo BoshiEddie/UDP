@@ -8,21 +8,20 @@ $client_information = $_SESSION['user_inform'][0];
 <body>
 <header class="fixed-top">
     <div class="nav-img ">
-        <img src="asset/images/logo_name_fix.png">
+        <img src="asset/images/logo_name.png">
     </div>
-    <nav class="navbar_bottom fixed-bottom">
-        <a href="index.php?action=home">Home</a>
-        <a href="index.php?action=home">Process</a>
-        <a href="index.php?action=setting" class="active">Setting</a>
-    </nav>
+    <div class="navbar navbar-fixed-bottom">
+        <a href="index.php?action=home"><i class="fas fa-home"></i>&nbspHome</a>
+        <a href="index.php?action=history"><i class="fas fa-chart-line"></i>&nbspHistory</a>
+        <a href="index.php?action=profile" class="active"><i class="fas fa-user"></i>&nbspProfile</a>
+    </div>
 </header>
-
 
 <div class="container cont_overflow">
     <!-- user profile   -->
     <div class="user_profile mx-auto border-bottom">
         <div class="profile_img">
-            <img src="asset/images/JayBrady1.jpg">
+            <img src="asset/images/profile.png">
         </div>
         <div class="profile_details">
             <p class="font-weight-bolder">
@@ -38,7 +37,7 @@ $client_information = $_SESSION['user_inform'][0];
     </div>
     <!-- user data   -->
     <div class="user_data mx-auto">
-        <h5>My Info</h5>
+        <h4>My Info</h4>
         <table class="table table-bordered table-hover">
             <tbody>
             <tr>
@@ -64,7 +63,7 @@ $client_information = $_SESSION['user_inform'][0];
     <div class="trainer_profile mx-auto border-bottom">
         <h5>My Trainer</h5>
         <div class="profile_img">
-            <img src="asset/images/KenColeman.jpg">
+            <img src="asset/images/profile.png">
         </div>
         <div class="profile_details">
             <p class="font-weight-bolder">
@@ -80,16 +79,15 @@ $client_information = $_SESSION['user_inform'][0];
     </div>
 
     <br><br><br>
-    <div>
-        <button class="butttons">
-            <a href="model/logout.php"><i aria-hidden="true"></i> &nbsp;Sign Out</a>
-        </button>
-        <button class="butttons">
-            <a href=""><i aria-hidden="true"></i> &nbsp;Reset Password</a>
+    <div class="buttons">
+        <button class="btn-primary btn-lg" id="signout">
+            <a href="model/logout.php" style="color:#43425D;">Sign Out</a>
         </button>
 
+        <!--          <button class="btn-primary btn-lg" id="reset">-->
+        <!--              <a href="" style="color:#43425D;">Reset Password</a>-->
+        <!--          </button>-->
     </div>
-
 </div>
 </body>
 <?php include 'asset/include/footer.php'; ?>
@@ -113,6 +111,7 @@ $client_information = $_SESSION['user_inform'][0];
         $("#height").html(height);
         $("#medical_issues").html(medical_issues);
     });
+
 
 </script>
 </html>

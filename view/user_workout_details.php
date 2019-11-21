@@ -10,37 +10,57 @@ include 'asset/include/header.php';
         }
     </style>
 </head>
-<body onload="timer()">
+<body onload="timer()" id="workout_body">
 
-<header class="fixed-top">
-    <div class="nav-img ">
-        <img src="asset/images/logo_name_fix.png">
-    </div>
-    <nav class="navbar_bottom fixed-bottom">
-        <a href="index.php?action=home" class="active">Home</a>
-        <a href=" index.php?action=home">Process</a>
-        <a href="index.php?action=setting" ">Setting</a>
-    </nav>
-</header>
-<div class="container cont_overflow">
+<div class="header" id="myHeader">
+    <!-- Div for workout timer -->
     <div>
         <div id="count">
-            <span id="id_H">00</span>
-            <span id="id_M">00</span>
-            <span id="id_S">00</span>
+            <b>
+                <span id="id_H">00</span>
+                <span>:</span>
+                <span id="id_M">00</span>
+                <span>:</span>
+                <span id="id_S">00</span>
+            </b>
         </div>
-        <input id="pause" type="button" value="pause">
-        <input id="start" type="button" value="start">
+        <p id="duration">Duration</p>
+
+        <!-- <input id="pause" type="button" value="pause">
+        <input id="start" type="button" value="start"> -->
     </div>
 
+    <!-- Div for rest and finish -->
+    <!-- <span id="stopwatch" class="fas fa-stopwatch fa-lg"></span>
+    <span class="fas fa-check fa-lg"></span> -->
 
-    <div>
-        <h2>Body part here</h2>
+    <div class="rest_finish_1">
+        &nbsp
+
+        <span id="stopwatch" class="fas fa-stopwatch fa-lg"></span>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+        <span class="fas fa-check fa-lg"></span>
+
+        <div class="rest_finish">
+
+            <span id="pause" type="button" value="pause">Rest</span>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <span id="finish">Finish</span>
+        </div>
+
+    </div>
+
+</div>
+<!--tables part-->
+<div class="container cont_overflow_height">
+    <div class="details">
+        <h2 id="workout_title">Body part here</h2>
 
         <!--exercise table here-->
-        <table border="1">
-            <thead>
-            <tr>
+        <table class="table table-bordered ">
+            <thead class="thead">
+            <tr height=70>
                 <th>Exercise</th>
                 <th>Sets</th>
                 <th>Reps</th>
@@ -48,7 +68,7 @@ include 'asset/include/header.php';
             </tr>
             </thead>
 
-            <tbody>
+            <tbody class="tbody">
             <tr>
                 <td rowspan="3" id="ex1">Exercise1</td>
                 <td class="ex1set">1</td>
@@ -58,6 +78,7 @@ include 'asset/include/header.php';
             <tr>
                 <td class="ex1set">2</td>
                 <td>12</td>
+                <!-- <input type="text" name="" value="0" style="text-align:center"> -->
                 <td>0</td>
             </tr>
             <tr>
@@ -81,14 +102,79 @@ include 'asset/include/header.php';
                 <td>10</td>
                 <td>10</td>
             </tr>
+            <tr>
+                <td rowspan="3" id="ex1">Exercise1</td>
+                <td class="ex1set">1</td>
+                <td>12</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td class="ex1set">2</td>
+                <td>12</td>
+                <!-- <input type="text" name="" value="0" style="text-align:center"> -->
+                <td>0</td>
+            </tr>
+            <tr>
+                <td class="ex1set">3</td>
+                <td>12</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td rowspan="3" id="ex1">Exercise1</td>
+                <td class="ex1set">1</td>
+                <td>12</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td class="ex1set">2</td>
+                <td>12</td>
+                <!-- <input type="text" name="" value="0" style="text-align:center"> -->
+                <td>0</td>
+            </tr>
+            <tr>
+                <td class="ex1set">3</td>
+                <td>12</td>
+                <td>0</td>
+            </tr>
             </tbody>
         </table>
     </div>
     <br>
+
+    <!-- Finish workout button -->
     <div>
-        <button id="finish_workout" class="butttons_dark">FINISH WORKOUT</button>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn-primary btn-lg buttons" data-toggle="modal"
+                data-target="#exampleModal" id="finish_workout" style="color:#43425D;">
+            <b>FINISH WORKOUT</b>
+        </button>
+
+        <!-- dialog box -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Save Workout</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Please confirm to save your workout.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-info" id="save_workout">Save Workout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript">
@@ -177,6 +263,28 @@ include 'asset/include/header.php';
         });
     }
     ;
+
+   $('#save_workout').click(function () {
+       window.location.href="index.php?action=history";
+   })
+    //Fixed header
+    // When the user scrolls the page, execute myFunction
+    // window.onscroll = function() {myFunction()};
+    //
+    // // Get the header
+    // var header = document.getElementById("myHeader");
+    //
+    // // Get the offset position of the navbar
+    // var sticky = header.offsetTop;
+    //
+    // // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    // function myFunction() {
+    //   if (window.pageYOffset > sticky) {
+    //     header.classList.add("sticky");
+    //   } else {
+    //     header.classList.remove("sticky");
+    //   }
+    // }
 
 </script>
 </html>
