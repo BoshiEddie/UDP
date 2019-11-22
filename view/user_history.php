@@ -1,7 +1,7 @@
 <?php
+session_start();
 $title = 'Settings';
 include 'asset/include/header.php';
-session_start();
 $client_information = $_SESSION['user_inform'][0];
 ?>
 

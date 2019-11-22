@@ -1,7 +1,7 @@
 <?php
+session_start();
 $title = 'User Login';
 include 'asset/include/header.php';
-session_start();
 if (isset($_SESSION['user_session']) != "") {
     header("location:index.php?action=home");
 }
