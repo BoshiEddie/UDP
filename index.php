@@ -12,8 +12,6 @@ if ($action == NULL) {
     }
 }
 
-global $clientNumber;
-
 if ($action == 'user_login') {
     include('view/userLogIn.php');
 } else if ($action == "home" ) {

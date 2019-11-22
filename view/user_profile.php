@@ -1,8 +1,10 @@
 <?php
 session_start();
 $title = 'Settings';
-include 'asset/include/header.php';
 $client_information = $_SESSION['user_inform'][0];
+echo json_encode($_SESSION['user_inform'][0]);
+
+include 'asset/include/header.php';
 ?>
 
 <body>
