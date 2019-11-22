@@ -24,10 +24,11 @@ $_SESSION['user_inform'] = $results;
 <!-- Welcome Message -->
 <div class="container cont_overflow">
     <div>
+      <!-- <div class="animated fadeInUp"> -->
         <div class="animated fadeInUp">
             <h1 id="welcome">Welcome back, <b><?php echo $results[0]['firstname'], " ", $results[0]['lastname']; ?> </b>
             </h1>
-            <img class="circular--square" src="asset/images/profile.png" height="50" width="50"/>
+            <img class="circular--square" id="profile_pic" src="asset/images/profile.png" height="50" width="50"/>
 
             <p id="your_workout">Here's your workout today</p>
 
@@ -36,6 +37,7 @@ $_SESSION['user_inform'] = $results;
         <!--        <div class="animated fadeIn delay-1s">-->
     </div>
     <!-- Box for workout plan -->
+    <!-- <div class="animated fadeIn delay-1s"> -->
     <div class="animated fadeIn delay-1s">
 
         <div class="box">
@@ -45,18 +47,27 @@ $_SESSION['user_inform'] = $results;
                     <b><span id="time"></span></b>
                 </div>
             </div>
-            <table class="box_3">
-                <thead>
+            <table class="workout_table">
+                <thead class="box_2">
                 <tr>
-                    <td>Exercise</td>
-                    <td>Sets</td>
+                    <td>EXERCISES</td>
+                    <td>SETS</td>
                 </tr>
                 </thead>
                 <tbody class="box_3">
                 <tr>
-                    <td>E1</td>
+                    <td>BENCH PRESS</td>
                     <td>4</td>
                 </tr>
+                <tr>
+                    <td>AB ROLL OUTS</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>OVERHEAD PRESS</td>
+                    <td>4</td>
+                </tr>
+
                 </tbody>
             </table>
         </div>
