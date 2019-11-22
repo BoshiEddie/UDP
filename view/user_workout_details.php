@@ -103,36 +103,36 @@ include 'asset/include/header.php';
                 <td>10</td>
             </tr>
             <tr>
-                <td rowspan="3" id="ex1">Exercise1</td>
-                <td class="ex1set">1</td>
+                <td rowspan="3" id="ex3">Exercise3</td>
+                <td class="ex3set">1</td>
                 <td>12</td>
                 <td>0</td>
             </tr>
             <tr>
-                <td class="ex1set">2</td>
-                <td>12</td>
-                <!-- <input type="text" name="" value="0" style="text-align:center"> -->
-                <td>0</td>
-            </tr>
-            <tr>
-                <td class="ex1set">3</td>
-                <td>12</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td rowspan="3" id="ex1">Exercise1</td>
-                <td class="ex1set">1</td>
-                <td>12</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td class="ex1set">2</td>
+                <td class="ex3set">2</td>
                 <td>12</td>
                 <!-- <input type="text" name="" value="0" style="text-align:center"> -->
                 <td>0</td>
             </tr>
             <tr>
-                <td class="ex1set">3</td>
+                <td class="ex3set">3</td>
+                <td>12</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td rowspan="3" id="ex4">Exercise4</td>
+                <td class="ex4set">1</td>
+                <td>12</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td class="ex4set">2</td>
+                <td>12</td>
+                <!-- <input type="text" name="" value="0" style="text-align:center"> -->
+                <td>0</td>
+            </tr>
+            <tr>
+                <td class="ex4set">3</td>
                 <td>12</td>
                 <td>0</td>
             </tr>
@@ -178,66 +178,8 @@ include 'asset/include/header.php';
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript">
-    //timmer
-    let totalCount = 0;
-
-    function timer() {
-        console.log("timer working");
-
-        function $(id) {
-            return document.getElementById(id)
-        }
-
-        let count = 0;
-        let timer = null;
-        timer = setInterval(function () {
-            count++;
-            console.log(count);
-            console.log("id_S");
-            $("id_S").innerHTML = showNum(count % 60);
-            $("id_M").innerHTML = showNum(parseInt(count / 60) % 60);
-            $("id_H").innerHTML = showNum(parseInt(count / 60 / 60));
-        }, 1000);
-
-
-        $("start").onclick = function () {
-            timer = setInterval(function () {
-                count++;
-                console.log(count);
-                console.log("id_S");
-                $("id_S").innerHTML = showNum(count % 60);
-                $("id_M").innerHTML = showNum(parseInt(count / 60) % 60);
-                $("id_H").innerHTML = showNum(parseInt(count / 60 / 60));
-            }, 1000)
-        };
-        $("pause").onclick = function () {
-            clearInterval(timer)
-        };
-
-        function showNum(num) {
-            if (num < 10) {
-                return '0' + num
-            }
-            return num
-        };
-
-        $("finish_workout").onclick = function () {
-            $("pause").onclick();
-            totalCount = count;
-            count = 0;
-            $("id_S").innerHTML = "00";
-            $("id_M").innerHTML = "00";
-            $("id_H").innerHTML = "00";
-            saveTime(totalCount);
-        };
-    }
-
-    function saveTime(t) {
-        alert(t);
-    };
-
     //selected table
-    for (let i = 1; i <= 2; i++) {
+    for (let i = 1; i <= 4; i++) {
         //whole exercise done
         $("#ex" + i).click(function () {
             $(this).css("backgroundColor", "#7BC96F")
@@ -267,24 +209,5 @@ include 'asset/include/header.php';
    $('#save_workout').click(function () {
        window.location.href="index.php?action=history";
    })
-    //Fixed header
-    // When the user scrolls the page, execute myFunction
-    // window.onscroll = function() {myFunction()};
-    //
-    // // Get the header
-    // var header = document.getElementById("myHeader");
-    //
-    // // Get the offset position of the navbar
-    // var sticky = header.offsetTop;
-    //
-    // // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    // function myFunction() {
-    //   if (window.pageYOffset > sticky) {
-    //     header.classList.add("sticky");
-    //   } else {
-    //     header.classList.remove("sticky");
-    //   }
-    // }
-
 </script>
 </html>
