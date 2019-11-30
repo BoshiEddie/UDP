@@ -10,7 +10,7 @@ class ExerciseActionDAO{
         $db = new Database();
         $conn = $db->getConnection();
         // prepared statement helps to prevent SQL injection attacks
-        $stmt = $conn->prepare("SELECT ea.exercise_id, ea.exercise_name, bp.body_part_name FROM exercise_action ea INNER JOIN body_part bp ON ea.body_part_id = bp.body_part_id WHERE exercise_name LIKE ?");
+        $stmt = $conn->prepare("SELECT ea.action_id, ea.exercise_name, bp.body_part_name FROM exercise_action ea INNER JOIN body_part bp ON ea.body_part_id = bp.body_part_id WHERE exercise_name LIKE ?");
 
         $like_en = "%" . $en . "%";
         $stmt->bind_param("s", $like_en);

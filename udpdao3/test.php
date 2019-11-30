@@ -7,12 +7,14 @@ require_once 'ExerciseAction.php';
 require_once 'BodyPart.php';
 require_once 'BodyPartDAO.php';
 require_once 'ExerciseSheetDAO.php';
+require_once 'ClientUpdateSheetDAO.php';
 
 $bp = new BodyPartDAO();
 $c = new ClientDAO();
 $i = new InstructorDAO();
 $exercise = new ExerciseActionDAO();
 $es = new ExerciseSheetDAO();
+$updateClientSheet = new ClientUpdateSheetDAO();
 
 echo json_encode($bp->findByBodyPartName("legs"));
 
@@ -35,6 +37,11 @@ echo "<hr>";
 
 echo json_encode($es->findSheet("Chest Practice"));
 
+echo "<hr>";
+
+$updateClientSheet->changeReps(1, 15);
+$updateClientSheet->changeWeight(2, 60);
+$updateClientSheet->changeSet(3, 10, 40);
 //$i->insert("Tom", "Stall", "Cork", "0872222222", "03-03-1982", "3Password", 1, "tom@nomail.com");
 
 //$i->update(3, "", "", "", "08733333333", "", "", 1, "tomstall@nomail.com");
