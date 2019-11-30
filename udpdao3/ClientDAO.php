@@ -1,7 +1,6 @@
 <?php
 
 require_once 'Database.php';
-//require_once  'Client.php';
 require_once 'IclientInterface.php';
 
 class ClientDAO implements IclientInterface{

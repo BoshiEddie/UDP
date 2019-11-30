@@ -1,7 +1,6 @@
 <?php
 
 require_once 'Database.php';
-require_once 'BodyPart.php';
 
 class BodyPartDAO{
 

@@ -1,13 +1,12 @@
 <?php
 require_once 'ClientDAO.php';
 require_once 'InstructorDAO.php';
-require_once 'Client.php';
 require_once 'ExerciseActionDAO.php';
 require_once 'ExerciseAction.php';
-require_once 'BodyPart.php';
 require_once 'BodyPartDAO.php';
 require_once 'ExerciseSheetDAO.php';
 require_once 'ClientUpdateSheetDAO.php';
+require_once 'ChangeClientDetailsDAO.php';
 
 $bp = new BodyPartDAO();
 $c = new ClientDAO();
@@ -15,6 +14,7 @@ $i = new InstructorDAO();
 $exercise = new ExerciseActionDAO();
 $es = new ExerciseSheetDAO();
 $updateClientSheet = new ClientUpdateSheetDAO();
+$changeClientDetails = new ChangeClientDetailsDAO();
 
 echo json_encode($bp->findByBodyPartName("legs"));
 
@@ -42,6 +42,22 @@ echo "<hr>";
 $updateClientSheet->changeReps(1, 15);
 $updateClientSheet->changeWeight(2, 60);
 $updateClientSheet->changeSet(3, 10, 40);
+
+echo "<hr>";
+
+$changeClientDetails->changeFirstName(3, "Tomas");
+$changeClientDetails->changeLastName(3, "Stale");
+$changeClientDetails->changeFullName(3, "Tom", "Stall");
+$changeClientDetails->changeAddress(3, "Drogheda");
+$changeClientDetails->changePhoneNumber(3, "0874444444");
+$changeClientDetails->changeMedicalIssues(3, "Head Injury");
+$changeClientDetails->changeCurrentWeight(3, "85Kg");
+$changeClientDetails->changePassword(3, "4Password");
+$changeClientDetails->changeEmail(3, "tomstall@gmail.com");
+
+$changeClientDetails->changeAll(2, "Bobby", "Smythe", "Newry", "0861231212", "Cracked Orbital", "82.5Kg", "5Password", "bobbysmythe@gmail.com");
+
+
 //$i->insert("Tom", "Stall", "Cork", "0872222222", "03-03-1982", "3Password", 1, "tom@nomail.com");
 
 //$i->update(3, "", "", "", "08733333333", "", "", 1, "tomstall@nomail.com");
