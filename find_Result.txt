@@ -1,3 +1,23 @@
+#put the function in clientdaoServer
+function workoutDate($client_id){
+        $db = new Database();
+        $conn = $db->getConnection();
+        $stmt = $conn ->prepare("SELECT distinct(date) FROM result_details WHERE client_id = ?");
+        $stmt->bind_param("i",$client_id);
+        $stmt ->execute();
+        $result = $stmt ->get_result();
+        $stmt->close();
+
+        $dates = array();
+
+        while($date = $result->fetch_assoc()){
+
+            array_push($dates,$date);
+
+        }
+        return $dates;
+        
+    }
 
 function workoutResult($client_id,$dates){
 
