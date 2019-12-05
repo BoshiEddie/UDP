@@ -1,32 +1,73 @@
 
-//put it into the server
-
-function workoutResult($client_id){
+function workoutResult($client_id,$dates){
 
         $db = new Database();
         $conn = $db->getConnection();
-        $stmt = $conn -> prepare("SELECT select es.sheet_name, rd.result, rd.date
+        $stmt = $conn -> prepare("SELECT es.sheet_name, rd.result, rd.date
                                   FROM exercise_sheet es, result_details rd
                                   WHERE es.sheet_id = rd.sheet_id
-                                  AND rd.client_id = ?
-                                  ORDER BY rd.date desc");
-        $stmt->bind_param("i",$sheet_id);
+                                  AND rd.client_id = ?");
+                                
+        $stmt->bind_param("i",$client_id);
         $stmt->execute();
         $result=$stmt->get_result();
-        $stmt->close();
+        
 
         $history = array();
+       
+        foreach($dates as $date){
+            $stmt->execute();
+            $result=$stmt->get_result();
+            $date_array = array();
+            
+            while($details = $result->fetch_assoc()){
 
-        while($details = $result->fetch_assoc()){
-            array_push($history,$details);
+                
+                
+                if($details['date'] == $date['date']){
+                    echo "k : ".$k."<br/>";
+                    array_push($date_array,$details);
+                    
+                }
+                
+            }
+
+            
+            $history[$date['date']] = $date_array;
+            
         }
 
-        return $history;
+        return json_encode($history);
 
-}
+    }
 
-//put the block of code into history page
+#code for test.php
 
-$c->clientDataService();
-
-$details = $c->workoutdetails($client_information['client_id']);
+<?php
+    require_once 'model/clientDataService.php';
+    $c = new clientDataService();
+    $r = $c->workoutDate(1);
+    $results = $c->workoutResult(1,$r);
+    echo  $results;
+    /*
+    {
+        "2019-12-03":
+        [
+            {
+                "sheet_name":"Chest Practice",
+                "result":80,
+                "date":"2019-12-03"
+            }
+        ],
+        
+        "2019-12-04":
+        [
+            {
+                "sheet_name":"Back Practice",
+                "result":90,
+                "date":"2019-12-04"
+            }
+        ]
+    }
+    */
+?>
