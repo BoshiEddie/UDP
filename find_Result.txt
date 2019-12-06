@@ -104,12 +104,13 @@ function distinctActionName($client_id){
                                     array_push($actions_array,$details);
 
                                 }
-                                    
-                                $sheet_array[$action['exercise_name']] = $actions_array;
-
+                                if(sizeof($actions_array)!= 0){
+                                        $sheet_array[$action['exercise_name']] = $actions_array;
+                                }
                             }
-
-                            $date_array[$name['sheet_name']] = $sheet_array;
+                            if(sizeof($sheet_array)!=0){
+                                $date_array[$name['sheet_name']] = $sheet_array;
+                            }
                         }            
                     }
                 }
